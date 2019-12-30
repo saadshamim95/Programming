@@ -4,6 +4,9 @@ namespace Functional
 {
     class HarmonicNumber
     {
+        /// <summary>
+        /// Prints the harmonic number.
+        /// </summary>
         public void printHarmonicNumber() {
             int num = 0;
             while (num < 1) {

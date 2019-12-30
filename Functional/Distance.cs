@@ -4,6 +4,9 @@ namespace Functional
 {
     class Distance
     {
+        /// <summary>
+        /// Calculates the distance.
+        /// </summary>
         public void calculateDistance() {
             Console.Write("Enter the value of X: ");
             int x = Convert.ToInt32(Console.ReadLine());

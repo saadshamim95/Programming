@@ -4,6 +4,9 @@ namespace Functional
 {
     class Factors
     {
+        /// <summary>
+        /// Prints the factors.
+        /// </summary>
         public void printFactors() {
             int num = 0;
             while (num < 2) {

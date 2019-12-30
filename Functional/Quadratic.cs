@@ -4,6 +4,9 @@ namespace Functional
 {
     class Quadratic
     {
+        /// <summary>
+        /// Rootses this instance.
+        /// </summary>
         public void roots() {
             Console.Write("Enter the value of a: ");
             int a = Convert.ToInt32(Console.ReadLine());

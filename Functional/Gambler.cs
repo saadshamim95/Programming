@@ -4,6 +4,9 @@ namespace Functional
 {
     class Gambler
     {
+        /// <summary>
+        /// Gamblings this instance.
+        /// </summary>
         public void gambling() {
             Console.Write("Enter the value of Stake: ");
             int stake = Convert.ToInt32(Console.ReadLine());

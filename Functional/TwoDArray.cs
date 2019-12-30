@@ -4,6 +4,9 @@ namespace Functional
 {
     class TwoDArray
     {
+        /// <summary>
+        /// Inputs this instance.
+        /// </summary>
         public void input()
         {
             Console.WriteLine("1: Integers");

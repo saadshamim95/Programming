@@ -5,6 +5,9 @@ namespace Functional
     class LeapYear
     {
         int year = 0;
+        /// <summary>
+        /// Leaps the year.
+        /// </summary>
         public void leapYear()
         {
             while (year < 1000 || year > 9999)

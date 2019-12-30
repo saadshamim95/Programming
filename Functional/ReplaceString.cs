@@ -4,6 +4,9 @@ namespace Functional
 {
     class ReplaceString
     {
+        /// <summary>
+        /// Prints this instance.
+        /// </summary>
         public void Print()
         {
             string userName = "";

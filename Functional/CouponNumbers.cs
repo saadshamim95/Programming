@@ -2,9 +2,6 @@
 
 namespace Functional
 {
-    /// <summary>
-    /// 
-    /// </summary>
     class CouponNumbers
     {
         /// <summary>
@@ -18,7 +15,6 @@ namespace Functional
             for (int i = 0; i < number; i++)
                 used[i] = false;
             int count = 0;
-            ////
             while (count != number) {
                 Random random = new Random();
                 int position = random.Next(number) % number;

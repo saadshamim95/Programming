@@ -4,6 +4,9 @@ namespace Functional
 {
     class PowerOfTwo
     {
+        /// <summary>
+        /// Prints the power of two.
+        /// </summary>
         public void printPowerOfTwo() {
             int num=32;
             while (!(num >= 0 && num < 31)) {

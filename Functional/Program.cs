@@ -4,6 +4,10 @@ namespace Functional
 {
     class Program
     {
+        /// <summary>
+        /// Defines the entry point of the application.
+        /// </summary>
+        /// <param name="args">The arguments.</param>
         static void Main(string[] args)
         {
             Console.WriteLine("1: Replace String");
@@ -108,7 +112,7 @@ namespace Functional
                         t = Convert.ToInt32(Console.ReadLine());
                         v = Convert.ToInt32(Console.ReadLine());
                     }
-                    windChill.effectiveTemperature(t, v);
+                    windChill.calculateEffectiveTemperature(t, v);
                     break;
                 default:
                     Console.WriteLine("Wrong Choice!");

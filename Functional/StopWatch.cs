@@ -7,6 +7,9 @@ namespace Functional
 {
     class StopWatch
     {
+        /// <summary>
+        /// Simulates this instance.
+        /// </summary>
         public void simulate() {
             /*Console.Write("Press Enter to Start!");
             Console.ReadLine();

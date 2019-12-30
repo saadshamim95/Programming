@@ -4,6 +4,9 @@ namespace Functional
 {
     class Permutations
     {
+        /// <summary>
+        /// Permutations this instance.
+        /// </summary>
         public void permutation() {
             string str = "abcd";
             int start = 0;
@@ -11,10 +14,17 @@ namespace Functional
             permute(str, start, end);
         }
 
+        /// <summary>
+        /// Permutes the specified string.
+        /// </summary>
+        /// <param name="str">The string.</param>
+        /// <param name="start">The start.</param>
+        /// <param name="end">The end.</param>
         public void permute(string str, int start, int end) {
             if (start == end)
                 Console.WriteLine(str);
             else {
+                
                 for (int i = start; i <= end; i++) {
                     str = swap(str, start, i);
                     permute(str, start + 1, end);
@@ -23,7 +33,14 @@ namespace Functional
             }
         }
 
-        public String swap(string str, int i, int j) {
+        /// <summary>
+        /// Swaps the specified string.
+        /// </summary>
+        /// <param name="str">The string.</param>
+        /// <param name="i">The i.</param>
+        /// <param name="j">The j.</param>
+        /// <returns></returns>
+        public String swap(string str, int i, int j) { 
             char temp;
             char[] charArray = str.ToCharArray();
             temp = charArray[i];

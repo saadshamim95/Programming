@@ -5,6 +5,9 @@ namespace Functional
 {
     class SumZero
     {
+        /// <summary>
+        /// Checks the sum for zero.
+        /// </summary>
         public void checkSumForZero() {
             /*Console.Write("Enter the number of Integers");
             int n = Convert.ToInt32(Console.ReadLine());

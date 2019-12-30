@@ -4,6 +4,15 @@ namespace Functional
 {
     class TicTacToe
     {
+        /// <summary>
+        /// Determines whether the specified row is free.
+        /// </summary>
+        /// <param name="row">The row.</param>
+        /// <param name="col">The col.</param>
+        /// <param name="array">The array.</param>
+        /// <returns>
+        ///   <c>true</c> if the specified row is free; otherwise, <c>false</c>.
+        /// </returns>
         public Boolean isFree(int row, int col, char[,] array) {
             if (array[row, col] == '-')
                 return true;
@@ -11,6 +20,10 @@ namespace Functional
                 return false;
         }
 
+        /// <summary>
+        /// Prints the specified array.
+        /// </summary>
+        /// <param name="array">The array.</param>
         public void Print(char[,] array) {
             for (int i = 0; i < 3; i++) {
                 for (int j = 0; j < 3; j++) {
@@ -20,6 +33,12 @@ namespace Functional
             }
         }
 
+        /// <summary>
+        /// Checks for win.
+        /// </summary>
+        /// <param name="value">The value.</param>
+        /// <param name="array">The array.</param>
+        /// <returns></returns>
         public Boolean checkForWin(char value, char[,] array) {
             //Row 1
             if (array[0, 0] == value && array[0, 1] == value && array[0, 2] == value)
@@ -49,6 +68,9 @@ namespace Functional
                 return false;
         }
 
+        /// <summary>
+        /// Games this instance.
+        /// </summary>
         public void game() {
             char[,] array = new char[3, 3];
             bool user = false;

@@ -4,6 +4,9 @@ namespace Functional
 {
     class FlipCoin
     {
+        /// <summary>
+        /// Flips the coin.
+        /// </summary>
         public void flipCoin()
         {
             Console.WriteLine("Enter number of times you want flip coin: ");

@@ -6,6 +6,10 @@ namespace Algorithm
 {
     class VendingMachine
     {
+        /// <summary>
+        /// Returns the notes.
+        /// </summary>
+        /// <param name="amount">The amount.</param>
         public void returnNotes(int amount) {
             if (amount >= 1000)
             {
@@ -95,6 +99,9 @@ namespace Algorithm
         }
 
         static int totalnotes = 0;
+        /// <summary>
+        /// Machines this instance.
+        /// </summary>
         public void machine() {
             Console.Write("Enter the amount to be returned: ");
             int amount = Convert.ToInt32(Console.ReadLine());

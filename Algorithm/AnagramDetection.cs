@@ -6,6 +6,9 @@ namespace Algorithm
 {
     class AnagramDetection
     {
+        /// <summary>
+        /// Anagrams this instance.
+        /// </summary>
         public void anagram() {
             Console.Write("Enter first string: ");
             string str1 = Console.ReadLine();

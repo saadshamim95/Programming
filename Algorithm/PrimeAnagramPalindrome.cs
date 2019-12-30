@@ -6,6 +6,9 @@ namespace Algorithm
 {
     class PrimeAnagramPalindrome
     {
+        /// <summary>
+        /// Checks for prime anagram palindrome.
+        /// </summary>
         public void checkForPrimeAnagramPalindrome() {
             int[] primes = new int[168];
             int j = 0;

@@ -7,6 +7,9 @@ namespace Algorithm
 {
     class InsertionSort
     {
+        /// <summary>
+        /// Sorts this instance.
+        /// </summary>
         public void Sort() {
             Console.Write("Enter the number of string you want to enter: ");
             int n = Convert.ToInt32(Console.ReadLine());

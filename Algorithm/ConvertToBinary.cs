@@ -6,6 +6,9 @@ namespace Algorithm
 {
     class ConvertToBinary
     {
+        /// <summary>
+        /// Conversions this instance.
+        /// </summary>
         public void conversion() {
             Console.Write("Enter the value: ");
             int value = Convert.ToInt32(Console.ReadLine());

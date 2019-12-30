@@ -120,7 +120,7 @@ namespace Algorithm
                     break;
                 case 14:
                     SquareRoot root = new SquareRoot();
-                    root.squareRoot();
+                    root.calculateSquareRoot();
                     break;
                 case 15:
                     ConvertToBinary convert = new ConvertToBinary();

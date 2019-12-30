@@ -6,6 +6,9 @@ namespace Algorithm
 {
     class FindingNumber
     {
+        /// <summary>
+        /// Finds this instance.
+        /// </summary>
         public void Find() {
             Console.Write("Enter the value of N: ");
             int N = Convert.ToInt32(Console.ReadLine());

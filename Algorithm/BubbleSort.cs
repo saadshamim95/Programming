@@ -6,6 +6,9 @@ namespace Algorithm
 {
     class BubbleSort
     {
+        /// <summary>
+        /// Sorts this instance.
+        /// </summary>
         public void Sort() {
             Console.Write("Enter the number of elements you want to add: ");
             int num = Convert.ToInt32(Console.ReadLine());

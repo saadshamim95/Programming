@@ -6,6 +6,9 @@ namespace Algorithm
 {
     class PrimeNumbers
     {
+        /// <summary>
+        /// Primes this instance.
+        /// </summary>
         public void prime() {
             Console.WriteLine("Prime Numbers between 0 & 1000 are: ");
             for (int i = 0; i <= 1000; i++) {

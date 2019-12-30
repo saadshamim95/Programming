@@ -6,6 +6,9 @@ namespace Algorithm
 {
     class TemperatureConversion
     {
+        /// <summary>
+        /// Temperatures the conversion.
+        /// </summary>
         public void temperatureConversion() {
             Console.WriteLine("1: Celsius to Fahrenheit");
             Console.WriteLine("2: Fahrenheit to Celsius");

@@ -6,6 +6,9 @@ namespace Algorithm
 {
     class MonthlyPayment
     {
+        /// <summary>
+        /// Payments this instance.
+        /// </summary>
         public void payment() {
             Console.Write("Enter the value of Principal Amount(P): ");
             int P = Convert.ToInt32(Console.ReadLine());

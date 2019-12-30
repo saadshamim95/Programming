@@ -6,6 +6,9 @@ namespace Algorithm
 {
     class DayOfWeek
     {
+        /// <summary>
+        /// Gets the day.
+        /// </summary>
         public void getDay() {
             Console.WriteLine("Enter Month, Day, Year: ");
             int month = Convert.ToInt32(Console.ReadLine());

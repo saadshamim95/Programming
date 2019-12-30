@@ -7,12 +7,19 @@ namespace Algorithm
 {
     class BinarySearch
     {
+        /// <summary>
+        /// Prints the specified array.
+        /// </summary>
+        /// <param name="array">The array.</param>
         public void Print(string[] array) {
             for (int i = 0; i < array.Length; i++)
                 Console.Write(array[i] + " ");
             Console.WriteLine();
         }
-
+        
+        /// <summary>
+        /// Binaries the search.
+        /// </summary>
         public void binarySearch() {
             string[] array = new string[10];
             try

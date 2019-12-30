@@ -6,6 +6,10 @@ namespace Algorithm
 {
     class MergeSort
     {
+        /// <summary>
+        /// Merges the sort.
+        /// </summary>
+        /// <param name="array">The array.</param>
         public void mergeSort(string[] array) {
             int n = array.Length;
             if (n < 2)
@@ -29,11 +33,17 @@ namespace Algorithm
 
                 mergeSort(left);
                 mergeSort(right);
-                merge(left, right, array);
+                merge(array, left, right);
             }
         }
 
-        public void merge(string[] left, string[] right, string[] array) {
+        /// <summary>
+        /// Merges the specified array.
+        /// </summary>
+        /// <param name="array">The array.</param>
+        /// <param name="left">The left.</param>
+        /// <param name="right">The right.</param>
+        public void merge(string[] array, string[] left, string[] right) {
             int sizeLeft = left.Length;
             int sizeRight = right.Length;
             int i = 0;

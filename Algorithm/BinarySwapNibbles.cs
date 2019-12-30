@@ -29,6 +29,12 @@ namespace Algorithm
             for (int i = 7; i >= 0; i--)
                 Console.Write(array[i]);
         }
+
+        /// <summary>
+        /// Converts to decimal.
+        /// </summary>
+        /// <param name="binary">The binary.</param>
+        /// <returns></returns>
         public int ToDecimal(int[] binary) {
             int result = 0;
             for (int i = 0; i < 8; i++) {
@@ -38,6 +44,9 @@ namespace Algorithm
             return result;
         }
 
+        /// <summary>
+        /// Swaps the nibbles.
+        /// </summary>
         public void swapNibbles() {
             Console.Write("Enter the value: ");
             int value = Convert.ToInt32(Console.ReadLine());

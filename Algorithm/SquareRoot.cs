@@ -6,7 +6,10 @@ namespace Algorithm
 {
     class SquareRoot
     {
-        public void squareRoot() {
+        /// <summary>
+        /// Calculates the square root.
+        /// </summary>
+        public void calculateSquareRoot() {
             int num = -1;
             while (!(num >= 0)) {
                 Console.Write("Enter the number whose Square Root you want: ");

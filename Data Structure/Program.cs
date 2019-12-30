@@ -10,9 +10,9 @@ namespace Data_Structure
         /// <param name="args">The arguments.</param>
         static void Main(string[] args)
         {
-            Stacks<char> stacks = new Stacks<char>();
-            //string str = "(5+6)*(7+8)/(4+3)(5+6)*(7+8)/(4+3)";
-            string str = "((5+(6-3)*((3/7)+3))/(11+13*((7/15)*(3+(15*5)))))";
+            Stack<char> stacks = new Stack<char>();
+            string str = "(5+6)*(7+8)/(4+3)(5+6)*(7+8)/(4+3)";
+            //string str = "((5+(6-3)*((3/7)+3))/(11+13*((7/15)*(3+(15*5)))))";
             char[] charArray = str.ToCharArray();
             for (int i = 0; i < charArray.Length; i++) {
                 if (charArray[i] == '(')
@@ -23,11 +23,28 @@ namespace Data_Structure
                 stacks.Print();
                 Console.WriteLine();
             }
-            bool value = stacks.isEmpty();
-            if (value)
+            if (stacks.isEmpty())
                 Console.WriteLine("Balanced Paranthesis!");
             else
                 Console.WriteLine("Unbalanced Paranthesis!");
+
+            Queue<int> queue = new Queue<int>();
+            queue.enqueue(2);
+            queue.enqueue(3);
+            queue.enqueue(4);
+            Console.Write("Queue: ");
+            queue.Print();
+            Console.WriteLine();
+            queue.dequeue();
+            queue.enqueue(5);
+            Console.Write("Queue: ");
+            queue.Print();
+            Console.WriteLine();
+            queue.dequeue();
+            queue.dequeue();
+            Console.Write("Queue: ");
+            queue.Print();
+            Console.WriteLine();
         }
     }
 }

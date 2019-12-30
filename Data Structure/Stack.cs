@@ -4,14 +4,14 @@ using System.Text;
 
 namespace Data_Structure
 {
-    class Stacks<T>
+    class Stack<T>
     {
         T[] array = new T[10];
         public int top=-1;
         /// <summary>
         /// Prevents a default instance of the <see cref="Stacks"/> class from being created.
         /// </summary>
-        public Stacks() {
+        public Stack() {
             top = -1;
         }
 

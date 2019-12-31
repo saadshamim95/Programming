@@ -35,7 +35,14 @@ namespace Data_Structure
                 rear = -1;
             }
             else
-                front++;
+            {
+                int i = front;
+                while (i < rear) {
+                    array[i] = array[i + 1];
+                    i++;
+                }
+                rear--;
+            }
         }
 
         public bool isEmpty() {
@@ -46,7 +53,12 @@ namespace Data_Structure
         }
 
         public int size() {
-            return (rear - front + 1);
+            if (isEmpty())
+                return 0;
+            else if (front == rear)
+                return 1;
+            else
+                return (rear - front + 1);
         }
 
         public void Print() {

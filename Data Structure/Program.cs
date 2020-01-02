@@ -41,7 +41,7 @@ namespace Data_Structure
             {
                 case 1:
                     UnOrderedList list = new UnOrderedList();
-                    list.Hello();
+                    list.Run();
                     break;
                 case 3:
                     BalancedParanthesis balancedParanthesis = new BalancedParanthesis();

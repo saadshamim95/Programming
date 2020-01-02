@@ -1,25 +1,33 @@
 ﻿using System;
+using System.IO;
 
 namespace Data_Structure
 {
     class UnOrderedList
     {
-        public void Hello()
+        public void Run()
         {
-            LinkedList<int> ll = new LinkedList<int>();
-            ll.add(10);
-            ll.add(20);
-            ll.add(30);
-            ll.add(40);
-            //Console.WriteLine("Linked List Size: " + ll.size());
-            ll.Print();
-            ll.remove(10);
-            ll.Print();
-            Console.WriteLine("Pop " + ll.pop());
-            ll.Print();
-            Console.WriteLine("Pop 0: " + ll.pop(0));
-            ll.Print();
-            //Console.WriteLine(ll.index(20));
+            LinkedList<string> linkedList = new LinkedList<string>();
+            StreamReader sr = new StreamReader("C:/Users/Saad Shamim/Source/Repos/Programming/Data Structure/Input.txt");
+            string line;
+            string[] array = new string[11];
+            int i = 0;
+            while ((line = sr.ReadLine()) != null)
+            {
+                array[i] = line;
+                i++;
+            }
+            for (int j = 0; j < array.Length; j++)
+                linkedList.add(array[j]);
+            //linkedList.Print();
+            Console.Write("Enter the word you want to search: ");
+            string search = Console.ReadLine();
+            bool found = linkedList.search(search);
+            if (!found)
+                linkedList.append(search);
+            System.IO.StreamWriter sw = new System.IO.StreamWriter(@"C:/Users/Saad Shamim/Source/Repos/Programming/Data Structure/Input.txt");
+            foreach (string lines in array)
+                sw.WriteLine(lines);
         }
     }
 }

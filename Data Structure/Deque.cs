@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Data_Structure
 {
@@ -8,7 +6,7 @@ namespace Data_Structure
     {
         private int front = -1;
         private int rear = -1;
-        T[] array = new T[10];
+        T[] array = new T[5];
 
         /// <summary>
         /// Determines whether this instance is empty.
@@ -61,6 +59,9 @@ namespace Data_Structure
                 rear++;
                 array[rear] = item;
             }
+            else if (rear == (array.Length - 1)) {
+                Console.WriteLine("Error! Deque is full...");
+            }
             else {
                 rear++;
                 array[rear] = item;
@@ -73,12 +74,16 @@ namespace Data_Structure
         public void removeFront() {
             if (isEmpty())
                 Console.WriteLine("Error! Deque has no item...");
-            else if (front == rear) {
+            else if (front == rear)
+            {
                 rear = -1;
                 front = -1;
             }
-            else 
-                front++;
+            else {
+                for (int i = 1; i <= rear; i++)
+                    array[i - 1] = array[i];
+                rear--;
+            }
         }
 
         /// <summary>
@@ -114,8 +119,6 @@ namespace Data_Structure
         public int size() {
             if (isEmpty())
                 return 0;
-            else if (front == rear)
-                return 1;
             else
                 return (rear - front + 1);
         }

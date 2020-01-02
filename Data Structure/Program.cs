@@ -10,54 +10,48 @@ namespace Data_Structure
         /// <param name="args">The arguments.</param>
         static void Main(string[] args)
         {
-            BalancedParanthesis balancedParanthesis = new BalancedParanthesis();
-            balancedParanthesis.check();
-            /*Queue<int> queue = new Queue<int>();
-            queue.enqueue(2);
-            queue.enqueue(3);
-            queue.enqueue(4);
-            Console.Write("Queue: ");
-            queue.Print();
-            Console.WriteLine();
-            queue.dequeue();
-            queue.enqueue(5);
-            Console.Write("Queue: ");
-            queue.Print();
-            Console.WriteLine();
-            queue.dequeue();
-            queue.dequeue();
-            Console.Write("Queue: ");
-            queue.Print();
-            Console.WriteLine();*/
-
-            int choice;
-            int item;
-            Deque<int> deque = new Deque<int>();
-            do {
-                Console.WriteLine("\n1: Add Front\n2: Add Rear\n3: Remove Front\n4: Remove Rear\n5: Print\n6: Exit");
-                choice = Convert.ToInt32(Console.ReadLine());
-                switch (choice) {
-                    case 1:
-                        item = Convert.ToInt32(Console.ReadLine());
-                        deque.addFront(item);
-                        break;
-                    case 2:
-                        item = Convert.ToInt32(Console.ReadLine());
-                        deque.addRear(item);
-                        break;
-                    case 3:
-                        deque.removeFront();
-                        break;
-                    case 4:
-                        deque.removeRear();
-                        break;
-                    case 5:
-                        deque.Print();
-                        break;
-                    case 6:
-                        break;
+            Console.WriteLine("1: UnOrdered List");
+            Console.WriteLine("2: Ordered List");
+            Console.WriteLine("3: Simple Balanced Parentheses");
+            Console.WriteLine("4: Simulate Banking Cash Counter");
+            Console.WriteLine("5: Palindrome-Checker");
+            Console.WriteLine("6: Hashing function to search a Number in a slot");
+            Console.WriteLine("7: Number of Binary Search Tree");
+            Console.WriteLine("8: Calendar");
+            Console.WriteLine("9: Question 9");
+            Console.WriteLine("10: Question 10");
+            Console.WriteLine("11: Question 11");
+            Console.WriteLine("12: Question 12");
+            Console.WriteLine("13: Question 13");
+            Console.WriteLine("14: Question 14");
+            int choice = 0;
+            while (!(choice > 0 && choice < 15))
+            {
+                try
+                {
+                    Console.Write("Enter your choice: ");
+                    choice = Convert.ToInt32(Console.ReadLine());
                 }
-            } while (choice != 6);
+                catch (FormatException)
+                {
+                    //Console.WriteLine(Ex);
+                }
+            }
+            switch (choice)
+            {
+                case 3:
+                    BalancedParanthesis balancedParanthesis = new BalancedParanthesis();
+                    balancedParanthesis.Check();
+                    break;
+                case 4:
+                    BankingCashCounter cashCounter = new BankingCashCounter();
+                    cashCounter.Simulate();
+                    break;
+                case 5:
+                    PalindromeChecker palindrome = new PalindromeChecker();
+                    palindrome.Check();
+                    break;
+            }
         }
     }
 }

@@ -1,13 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Data_Structure
 {
     class PalindromeChecker
     {
-        public void check() {
-            string str = "saad";
+        /// <summary>
+        /// Checks this instance.
+        /// </summary>
+        public void Check() {
+            //string str = "saad";
+            Console.Write("Enter the string: ");
+            string str = Console.ReadLine();
+            str = str.ToLower();
             char[] array = str.ToCharArray();
             Deque<char> deque = new Deque<char>();
             for (int i = 0; i < array.Length; i++)

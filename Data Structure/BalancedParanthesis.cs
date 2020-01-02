@@ -4,7 +4,10 @@ namespace Data_Structure
 {
     class BalancedParanthesis
     {
-        public void check() {
+        /// <summary>
+        /// Checks this instance.
+        /// </summary>
+        public void Check() {
             Stack<char> stacks = new Stack<char>();
             string str = "(5+6)*(7+8)/(4+3)(5+6)*(7+8)/(4+3)";
             //string str = "((5+(6-3)*((3/7)+3))/(11+13*((7/15)*(3+(15*5)))))";

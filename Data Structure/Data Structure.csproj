@@ -6,4 +6,8 @@
     <RootNamespace>Data_Structure</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Include="bin\OrderedLinkedList.cs" />
+  </ItemGroup>
+
 </Project>

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace Data_Structure
 {
@@ -66,8 +67,11 @@ namespace Data_Structure
             Node n = head;
             bool found = false;
             while (n.next != null) {
-                if (n.data.Equals(data)) {
+                //T temp = n.data;
+                if (object.Equals(n.data, data))
+                {
                     found = true;
+                    break;
                 }
                 n = n.next;
             }
@@ -120,8 +124,8 @@ namespace Data_Structure
         /// <returns></returns>
         public int index(T data) {
             Node n = head;
-            int count = 0;
-            while (!(n.data.Equals(data)))
+            int count = 1;
+            while (!(object.Equals(n.data,data)))
             {
                 count++;
                 n = n.next;
@@ -206,6 +210,17 @@ namespace Data_Structure
                 n = n.next;
             }   
             Console.WriteLine(n.data);
+        }
+
+        public void PrinttoFile() {
+            Node n = head;
+            StreamWriter streamWriter = new StreamWriter("Input.txt");
+            while (n.next != null) {
+                streamWriter.WriteLine(n.data);
+                n = n.next;
+            }
+            streamWriter.WriteLine(n.data);
+            streamWriter.Close();
         }
     }
 }

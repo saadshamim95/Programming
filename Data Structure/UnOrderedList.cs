@@ -8,26 +8,25 @@ namespace Data_Structure
         public void Run()
         {
             LinkedList<string> linkedList = new LinkedList<string>();
-            StreamReader sr = new StreamReader("C:/Users/Saad Shamim/Source/Repos/Programming/Data Structure/Input.txt");
+            StreamReader streamReader = new StreamReader("Input.txt");
             string line;
-            string[] array = new string[11];
-            int i = 0;
-            while ((line = sr.ReadLine()) != null)
+            while ((line = streamReader.ReadLine()) != null)
             {
-                array[i] = line;
-                i++;
+                linkedList.add(line);
             }
-            for (int j = 0; j < array.Length; j++)
-                linkedList.add(array[j]);
+            streamReader.Close();
             //linkedList.Print();
             Console.Write("Enter the word you want to search: ");
             string search = Console.ReadLine();
             bool found = linkedList.search(search);
             if (!found)
-                linkedList.append(search);
-            System.IO.StreamWriter sw = new System.IO.StreamWriter(@"C:/Users/Saad Shamim/Source/Repos/Programming/Data Structure/Input.txt");
-            foreach (string lines in array)
-                sw.WriteLine(lines);
+                linkedList.add(search);
+            else {
+                int pos = linkedList.index(search);
+                Console.WriteLine("Index: " + pos);
+            }
+            //linkedList.Print();
+            linkedList.PrinttoFile();
         }
     }
 }

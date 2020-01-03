@@ -59,6 +59,10 @@ namespace Data_Structure
                     PalindromeChecker palindrome = new PalindromeChecker();
                     palindrome.Check();
                     break;
+                case 6:
+                    Hashing hashing = new Hashing();
+                    hashing.Chaining();
+                    break;
             }
         }
     }

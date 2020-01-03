@@ -214,7 +214,7 @@ namespace Data_Structure
 
         public void PrinttoFile() {
             Node n = head;
-            StreamWriter streamWriter = new StreamWriter("Input.txt");
+            StreamWriter streamWriter = new StreamWriter(@"C:\Users\Saad Shamim\source\repos\Programming\Data Structure\Output.txt");
             while (n.next != null) {
                 streamWriter.WriteLine(n.data);
                 n = n.next;

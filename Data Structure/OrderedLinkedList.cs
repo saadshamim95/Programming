@@ -72,6 +72,13 @@ namespace Data_Structure
         public bool Search(T data) {
             bool found = false;
             Node current = head;
+            while (current.next != null) {
+                if (object.Equals(data, current.data)) {
+                    found = true;
+                    break;
+                }
+                current = current.next;
+            }
             return found;
         }
 
@@ -109,6 +116,8 @@ namespace Data_Structure
             int pos = 0;
             Node current = head;
             while (current.next != null) {
+                if (comparer.Compare(current.data, data) == 0)
+                    break;
                 pos++;
                 current = current.next;
             }
@@ -118,21 +127,28 @@ namespace Data_Structure
         public T pop() {
             T temp;
             Node current = head;
+            Node prev = null;
             while (current.next != null)
+            {
+                prev = current;
                 current = current.next;
+            }
+
             temp = current.data;
-            //current = null;
-            remove(current.data);
+            prev.next = null;
             return temp;
         }
 
         public T pop(int position) {
             Node current = head;
+            Node prev = null;
             while (position > 0) {
+                prev = current;
                 current = current.next;
                 position--;
             }
-            remove(current.data);
+            //remove(current.data);
+            prev.next = current.next;
             return current.data;
         }
 
@@ -140,6 +156,8 @@ namespace Data_Structure
         /// Prints this instance.
         /// </summary>
         public void Print() {
+            if (head == null)
+                return;
             Node node = head;
             while (node.next != null) {
                 Console.Write(node.data+" ");
@@ -148,10 +166,12 @@ namespace Data_Structure
             Console.WriteLine(node.data);
         }
 
-        public void PrintToFile()
+        public void PrintToFile(bool value)
         {
+            if (size() == 0)
+                return;
+            StreamWriter streamWriter = new StreamWriter(@"C:\Users\Saad Shamim\source\repos\Programming\Data Structure\NumbersOutput.txt", value);
             Node current = head;
-            StreamWriter streamWriter = new StreamWriter("Numbers.txt");
             while (current.next != null)
             {
                 streamWriter.WriteLine(current.data);

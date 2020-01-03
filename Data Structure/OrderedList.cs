@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Text;
 
 namespace Data_Structure
 {
@@ -12,7 +10,7 @@ namespace Data_Structure
         /// </summary>
         public void Run() {
             OrderedLinkedList<int> orderedLinkedList = new OrderedLinkedList<int>();
-            StreamReader streamReader = new StreamReader("Numbers.txt");
+            StreamReader streamReader = new StreamReader(@"C:\Users\Saad Shamim\source\repos\Programming\Data Structure\Numbers.txt");
             string item;
             while ((item = streamReader.ReadLine()) != null)
                 orderedLinkedList.add(Convert.ToInt32(item));
@@ -28,7 +26,7 @@ namespace Data_Structure
                 orderedLinkedList.add(number);
             Console.WriteLine("Modified Linked List: ");
             orderedLinkedList.Print();
-            orderedLinkedList.PrintToFile();
+            orderedLinkedList.PrintToFile(false);
         }
     }
 }

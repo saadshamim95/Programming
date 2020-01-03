@@ -8,7 +8,7 @@ namespace Data_Structure
         public void Run()
         {
             LinkedList<string> linkedList = new LinkedList<string>();
-            StreamReader streamReader = new StreamReader("Input.txt");
+            StreamReader streamReader = new StreamReader(@"C:\Users\Saad Shamim\source\repos\Programming\Data Structure\Input.txt");
             string line;
             while ((line = streamReader.ReadLine()) != null)
             {

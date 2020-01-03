@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="bin\OrderedLinkedList.cs" />
+    <Folder Include="bin\" />
   </ItemGroup>
 
 </Project>

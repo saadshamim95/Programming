@@ -43,6 +43,10 @@ namespace Data_Structure
                     UnOrderedList list = new UnOrderedList();
                     list.Run();
                     break;
+                case 2:
+                    OrderedList orderedList = new OrderedList();
+                    orderedList.Run();
+                    break;
                 case 3:
                     BalancedParanthesis balancedParanthesis = new BalancedParanthesis();
                     balancedParanthesis.Check();

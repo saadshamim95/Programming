@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 
 namespace Data_Structure
@@ -11,18 +12,23 @@ namespace Data_Structure
         /// </summary>
         public void Run() {
             OrderedLinkedList<int> orderedLinkedList = new OrderedLinkedList<int>();
-            orderedLinkedList.add(10);
-            orderedLinkedList.add(20);
-            orderedLinkedList.add(30);
-            orderedLinkedList.add(15);
+            StreamReader streamReader = new StreamReader("Numbers.txt");
+            string item;
+            while ((item = streamReader.ReadLine()) != null)
+                orderedLinkedList.add(Convert.ToInt32(item));
+            streamReader.Close();
+            Console.WriteLine("Items in OrderedLinkedList Linked List are: ");
             orderedLinkedList.Print();
-            /*int pos = orderedLinkedList.index(15);
-            Console.WriteLine("15 at position: " + pos);*/
-            //orderedLinkedList.remove(30);
-            //orderedLinkedList.pop();
-            int item = orderedLinkedList.pop(3);
-            Console.WriteLine("Pop: " + item);
+            Console.Write("Enter a Number: ");
+            int number = Convert.ToInt32(Console.ReadLine());
+            bool found = orderedLinkedList.Search(number);
+            if (found)
+                orderedLinkedList.remove(number);
+            else
+                orderedLinkedList.add(number);
+            Console.WriteLine("Modified Linked List: ");
             orderedLinkedList.Print();
+            orderedLinkedList.PrintToFile();
         }
     }
 }

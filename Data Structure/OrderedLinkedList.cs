@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 
 namespace Data_Structure
 {
@@ -145,6 +146,19 @@ namespace Data_Structure
                 node = node.next;
             }
             Console.WriteLine(node.data);
+        }
+
+        public void PrintToFile()
+        {
+            Node current = head;
+            StreamWriter streamWriter = new StreamWriter("Numbers.txt");
+            while (current.next != null)
+            {
+                streamWriter.WriteLine(current.data);
+                current = current.next;
+            }
+            streamWriter.WriteLine(current.data);
+            streamWriter.Close();
         }
     }
 }

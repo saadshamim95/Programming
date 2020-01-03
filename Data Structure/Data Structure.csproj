@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="bin\" />
+    <Content Include="bin\Debug\netcoreapp3.1\Numbers.txt" />
   </ItemGroup>
 
 </Project>

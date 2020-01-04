@@ -165,7 +165,7 @@ namespace Data_Structure
         /// </summary>
         /// <returns></returns>
         public T pop() {
-            int position = size()-1;
+            int position = size() - 1;
             Node n = head;
             Node temp = null;
             while (position > 1)
@@ -198,6 +198,17 @@ namespace Data_Structure
             temp = n.next;
             n.next = temp.next;
             return temp.data;
+        }
+
+        /// <summary>
+        /// Lasts the item.
+        /// </summary>
+        /// <returns></returns>
+        public T lastItem() {
+            Node current = head;
+            while (current.next != null)
+                current = current.next;
+            return current.data;
         }
 
         /// <summary>

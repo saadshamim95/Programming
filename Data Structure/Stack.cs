@@ -4,7 +4,7 @@ namespace Data_Structure
 {
     class Stack<T>
     {
-        T[] array = new T[10];
+        T[] array = new T[168];
         public int top=-1;
         /// <summary>
         /// Prevents a default instance of the <see cref="Stacks"/> class from being created.
@@ -29,14 +29,14 @@ namespace Data_Structure
         /// Pops this instance.
         /// </summary>
         /// <returns></returns>
-        public void pop() {
+        public T pop() {
             if (top == -1) {
                 Console.WriteLine("Error! Stack has no element to pop...");
-                return;
+                return default(T);
             } 
             T item = array[top];
             top--;
-            //return item;
+            return item;
         }
 
         /// <summary>

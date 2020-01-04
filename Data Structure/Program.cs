@@ -19,7 +19,7 @@ namespace Data_Structure
             Console.WriteLine("7: Number of Binary Search Tree");
             Console.WriteLine("8: Prime Numbers");
             Console.WriteLine("9: Prime Anagrams");
-            Console.WriteLine("10: Question 10");
+            Console.WriteLine("10: Prime Anagrams using Stack");
             Console.WriteLine("11: Question 11");
             Console.WriteLine("12: Print Month");
             Console.WriteLine("13: Question 13");
@@ -74,6 +74,10 @@ namespace Data_Structure
                 case 9:
                     PrimeAnagrams primeAnagrams = new PrimeAnagrams();
                     primeAnagrams.Anagram();
+                    break;
+                case 10:
+                    PrimeAnagramUsingStack primeAnagramUsingStack = new PrimeAnagramUsingStack();
+                    primeAnagramUsingStack.reversePrinting();
                     break;
                 case 12:
                     Calendar calendar = new Calendar();

@@ -1,10 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace Data_Structure
 {
-    class PrimeAnagrams
+    class PrimeAnagramUsingStack
     {
-        public void Anagram() {
+        public void reversePrinting() {
             int[] primes = new int[169];
             int j = 0;
             for (int i = 0; i < 1000; i++)
@@ -25,16 +27,18 @@ namespace Data_Structure
                     bool anagram = Utility.IsAnagrams(str1, str2);
                     bool flag1;
                     bool flag2;
-                    if (anagram) {
+                    if (anagram)
+                    {
                         int l = j;
                         flag1 = false;
                         flag2 = false;
-                        while (l > 0) {
+                        while (l > 0)
+                        {
                             if (anagramArray[l] == primes[i])
                                 flag1 = true;
                             if (anagramArray[l] == primes[k])
                                 flag2 = true;
-                            if(flag1 && flag2)
+                            if (flag1 && flag2)
                                 break;
                             l--;
                         }
@@ -51,35 +55,20 @@ namespace Data_Structure
                 }
             }
             Array.Sort(anagramArray);
-            
-            int[,] array = new int[2, 108];
-            int m = 1;
-            int n = 0;
-            for (int i = 0; i < primes.Length - 1; i++) {
-                if (primes[i] == anagramArray[m]) {
-                    array[0, m] = primes[i];
-                    m++;
-                }
-                else {
-                    array[1, n] = primes[i];
-                    n++;
-                }
-            }
-            Console.WriteLine();
-            Console.WriteLine("Prime numbers that are Anagrams: ");
-            for (int i = 1; i < array.GetLength(1); i++) {
-                Console.Write(array[0, i] + " ");
+
+            StackLinkedList<int> stack = new StackLinkedList<int>();
+            for (int i = 0; i < anagramArray.Length; i++)
+            {
+                stack.push(anagramArray[i]);
             }
 
+            Console.Write("Printing Stack: ");
             Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine("Prime numbers that are not Anagrams: ");
-            for (int i = 0; i < array.GetLength(1); i++)
+
+            for (int i = 0; i < anagramArray.Length - 1; i++)
             {
-                if (array[1, i] == 0)
-                    break;
-                Console.Write(array[1, i] + " ");
-            }                
+                Console.Write(stack.pop() + " ");
+            }
         }
     }
 }

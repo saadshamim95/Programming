@@ -23,13 +23,12 @@ namespace Data_Structure
                         months[2] = 29;
                 }
 
-                int firstDay = dayOfWeek(1, month, year);
-                //Console.WriteLine("First Day: " + firstDay);
+                int firstDay = dayOfWeek(month, 1, year);
                 for (int i = 0; i < 7; i++)
-                    Console.Write(" {00} ",day[i]);
+                    Console.Write(" {0} ",day[i]);
                 Console.WriteLine();
                 int k = 1;
-                for (int i = 0; i < 5; i++) {
+                for (int i = 0; i < 6; i++) {
                     for (int j = 0; j < 7; j++) {
                         /// Printing spaces till firstDay
                         ///

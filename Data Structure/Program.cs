@@ -17,7 +17,7 @@ namespace Data_Structure
             Console.WriteLine("5: Palindrome-Checker");
             Console.WriteLine("6: Hashing function to search a Number in a slot");
             Console.WriteLine("7: Number of Binary Search Tree");
-            Console.WriteLine("8: Calendar");
+            Console.WriteLine("8: Print Month");
             Console.WriteLine("9: Question 9");
             Console.WriteLine("10: Question 10");
             Console.WriteLine("11: Question 11");
@@ -62,6 +62,10 @@ namespace Data_Structure
                 case 6:
                     Hashing hashing = new Hashing();
                     hashing.Chaining();
+                    break;
+                case 7:
+                    NumberOfBST numberOfBST = new NumberOfBST();
+                    numberOfBST.Calculate();
                     break;
                 case 8:
                     Calendar calendar = new Calendar();

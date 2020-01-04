@@ -11,10 +11,7 @@ namespace Data_Structure
             {
                 bool prime = Utility.IsPrime(i);
                 if (prime)
-                {
-                    primes[j] = i;
-                    j++;
-                }
+                    primes[j++] = i;
             }
 
             int[] anagramArray = new int[108];
@@ -53,10 +50,40 @@ namespace Data_Structure
                     }
                 }
             }
-            Console.WriteLine("Value of j: " + j);
             Array.Sort(anagramArray);
+            /*Console.WriteLine("Prime numbers between 0-1000 that are Anagrams: ");
             for (int i = 1; i < anagramArray.Length; i++)
                 Console.Write(anagramArray[i] + " ");
+            Console.WriteLine();*/
+
+            int[,] array = new int[2, 108];
+            int m = 1;
+            int n = 0;
+            for (int i = 0; i < primes.Length - 1; i++) {
+                if (primes[i] == anagramArray[m]) {
+                    array[0, m] = primes[i];
+                    m++;
+                }
+                else {
+                    array[1, n] = primes[i];
+                    n++;
+                }
+            }
+            Console.WriteLine();
+            Console.WriteLine("Prime numbers that are Anagrams: ");
+            for (int i = 1; i < array.GetLength(1); i++) {
+                Console.Write(array[0, i] + " ");
+            }
+
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine("Prime numbers that are not Anagrams: ");
+            for (int i = 0; i < array.GetLength(1); i++)
+            {
+                if (array[1, i] == 0)
+                    break;
+                Console.Write(array[1, i] + " ");
+            }
         }
     }
 }

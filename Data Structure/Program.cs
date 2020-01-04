@@ -20,7 +20,7 @@ namespace Data_Structure
             Console.WriteLine("8: Prime Numbers");
             Console.WriteLine("9: Prime Anagrams");
             Console.WriteLine("10: Prime Anagrams using Stack");
-            Console.WriteLine("11: Question 11");
+            Console.WriteLine("11: Prime Anagrams using Queue");
             Console.WriteLine("12: Print Month");
             Console.WriteLine("13: Question 13");
             Console.WriteLine("14: Question 14");
@@ -78,6 +78,10 @@ namespace Data_Structure
                 case 10:
                     PrimeAnagramUsingStack primeAnagramUsingStack = new PrimeAnagramUsingStack();
                     primeAnagramUsingStack.reversePrinting();
+                    break;
+                case 11:
+                    PrimeAnagramUsingQueue primeAnagramUsingQueue = new PrimeAnagramUsingQueue();
+                    primeAnagramUsingQueue.printAnagram();
                     break;
                 case 12:
                     Calendar calendar = new Calendar();

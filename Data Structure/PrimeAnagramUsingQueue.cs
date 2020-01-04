@@ -2,9 +2,9 @@
 
 namespace Data_Structure
 {
-    class PrimeAnagramUsingStack
+    class PrimeAnagramUsingQueue
     {
-        public void reversePrinting() {
+        public void printAnagram() {
             int[] primes = new int[169];
             int j = 0;
             for (int i = 0; i < 1000; i++)
@@ -54,17 +54,17 @@ namespace Data_Structure
             }
             Array.Sort(anagramArray);
 
-            StackLinkedList<int> stack = new StackLinkedList<int>();
+            QueueLinkedList<int> queueLinkedList = new QueueLinkedList<int>();
             for (int i = 0; i < anagramArray.Length; i++)
-                stack.push(anagramArray[i]);
+                queueLinkedList.enqueue(anagramArray[i]);
 
-            Console.Write("Printing Stack: ");
-            Console.WriteLine();
-
-            for (int i = 0; i < anagramArray.Length - 1; i++)
-            {
-                Console.Write(stack.pop() + " ");
-            }
+            int item;
+            Console.WriteLine("Printing Queue:");
+            for (int i = 0; i < anagramArray.Length; i++) {
+                item = queueLinkedList.dequeue();
+                if (item != 0)
+                    Console.Write(item + " ");
+            }         
         }
     }
 }

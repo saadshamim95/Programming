@@ -211,6 +211,12 @@ namespace Data_Structure
             return current.data;
         }
 
+        public T removeFront() {
+            T item = head.data;
+            head = head.next;
+            return item;
+        }
+
         /// <summary>
         /// Prints this instance.
         /// </summary>

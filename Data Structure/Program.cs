@@ -17,11 +17,11 @@ namespace Data_Structure
             Console.WriteLine("5: Palindrome-Checker");
             Console.WriteLine("6: Hashing function to search a Number in a slot");
             Console.WriteLine("7: Number of Binary Search Tree");
-            Console.WriteLine("8: Print Month");
+            Console.WriteLine("8: Prime Numbers");
             Console.WriteLine("9: Question 9");
             Console.WriteLine("10: Question 10");
             Console.WriteLine("11: Question 11");
-            Console.WriteLine("12: Question 12");
+            Console.WriteLine("12: Print Month");
             Console.WriteLine("13: Question 13");
             Console.WriteLine("14: Question 14");
             int choice = 0;
@@ -68,6 +68,10 @@ namespace Data_Structure
                     numberOfBST.Calculate();
                     break;
                 case 8:
+                    PrimeNumbers primeNumbers = new PrimeNumbers();
+                    primeNumbers.prime();
+                    break;
+                case 12:
                     Calendar calendar = new Calendar();
                     calendar.printMonth();
                     break;

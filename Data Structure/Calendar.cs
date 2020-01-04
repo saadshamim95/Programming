@@ -28,18 +28,20 @@ namespace Data_Structure
                     Console.Write(" {0} ",day[i]);
                 Console.WriteLine();
                 int k = 1;
+                bool flag = false;
                 for (int i = 0; i < 6; i++) {
                     for (int j = 0; j < 7; j++) {
                         /// Printing spaces till firstDay
-                        ///
                         while (firstDay > 0) {
                             Console.Write("   ");
                             firstDay--;
                             j++;    /// Incrementing j
                         }
 
-                        if (k > months[month])
+                        if (k > months[month]) {
+                            flag = true;
                             break;
+                        }
 
                         if (k < 10)
                             Console.Write(" ");
@@ -47,6 +49,8 @@ namespace Data_Structure
                         Console.Write(k + " ");
                         k++;
                     }
+                    if (flag)
+                        break;
                     Console.WriteLine();
                 }
             }

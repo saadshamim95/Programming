@@ -18,7 +18,7 @@ namespace Data_Structure
             Console.WriteLine("6: Hashing function to search a Number in a slot");
             Console.WriteLine("7: Number of Binary Search Tree");
             Console.WriteLine("8: Prime Numbers");
-            Console.WriteLine("9: Question 9");
+            Console.WriteLine("9: Prime Anagrams");
             Console.WriteLine("10: Question 10");
             Console.WriteLine("11: Question 11");
             Console.WriteLine("12: Print Month");
@@ -70,6 +70,10 @@ namespace Data_Structure
                 case 8:
                     PrimeNumbers primeNumbers = new PrimeNumbers();
                     primeNumbers.prime();
+                    break;
+                case 9:
+                    PrimeAnagrams primeAnagrams = new PrimeAnagrams();
+                    primeAnagrams.Anagram();
                     break;
                 case 12:
                     Calendar calendar = new Calendar();

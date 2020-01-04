@@ -19,11 +19,11 @@ namespace Data_Structure
             }
             else {
                 if (month == 2) {
-                    if (isLeapYear(year))
+                    if (Utility.isLeapYear(year))
                         months[2] = 29;
                 }
 
-                int firstDay = dayOfWeek(month, 1, year);
+                int firstDay = Utility.dayOfWeek(month, 1, year);
                 for (int i = 0; i < 7; i++)
                     Console.Write(" {0} ",day[i]);
                 Console.WriteLine();
@@ -54,36 +54,6 @@ namespace Data_Structure
                     Console.WriteLine();
                 }
             }
-        }
-
-        /// <summary>
-        /// Determines whether [is leap year] [the specified year].
-        /// </summary>
-        /// <param name="year">The year.</param>
-        /// <returns>
-        ///   <c>true</c> if [is leap year] [the specified year]; otherwise, <c>false</c>.
-        /// </returns>
-        public bool isLeapYear(int year) {
-            bool value = false;
-            if (year % 400 == 0 || (year % 4 == 0 && year % 100 != 0))
-                value = true;
-            return value;
-        }
-
-        /// <summary>
-        /// Days the of week.
-        /// </summary>
-        /// <param name="M">The m.</param>
-        /// <param name="D">The d.</param>
-        /// <param name="Y">The y.</param>
-        /// <returns></returns>
-        public int dayOfWeek(int M, int D, int Y)
-        {
-            int y0 = Y - (14 - M) / 12;
-            int x = y0 + y0 / 4 - y0 / 100 + y0 / 400;
-            int m0 = M + 12 * ((14 - M) / 12) - 2;
-            int d0 = (D + x + 31 * m0 / 12) % 7;
-            return d0;
         }
     }
 }

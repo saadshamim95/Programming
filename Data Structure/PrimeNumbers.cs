@@ -11,7 +11,7 @@ namespace Data_Structure
                 k = 0;
                 for (int j = 0; j < 100; j++) {
                     int num = i * 100 + j;
-                    bool flag = IsPrime(num);
+                    bool flag = Utility.IsPrime(num);
                     if (flag) {
                         prime[i,k] = num;
                         k++;
@@ -28,22 +28,6 @@ namespace Data_Structure
                 }
                 Console.WriteLine();
             }
-        }
-
-        public bool IsPrime(int num) {
-            bool flag = true;
-            if (num < 2)
-                flag = false;
-            else {
-                for (int i = 2; i < num / 2; i++)
-                {
-                    if (num % i == 0) {
-                        flag = false;
-                        break;
-                    }
-                }
-            }
-            return flag;
         }
     }
 }

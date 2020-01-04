@@ -63,6 +63,10 @@ namespace Data_Structure
                     Hashing hashing = new Hashing();
                     hashing.Chaining();
                     break;
+                case 8:
+                    Calendar calendar = new Calendar();
+                    calendar.printMonth();
+                    break;
             }
         }
     }

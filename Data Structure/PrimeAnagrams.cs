@@ -51,34 +51,36 @@ namespace Data_Structure
                 }
             }
             Array.Sort(anagramArray);
-            
-            int[,] array = new int[2, 108];
+
+            int[][] array = new int[2][];
+            array[0] = new int[108];
+            array[1] = new int[61];
             int m = 1;
             int n = 0;
             for (int i = 0; i < primes.Length - 1; i++) {
                 if (primes[i] == anagramArray[m]) {
-                    array[0, m] = primes[i];
+                    array[0][m] = primes[i];
                     m++;
                 }
                 else {
-                    array[1, n] = primes[i];
+                    array[1][n] = primes[i];
                     n++;
                 }
             }
             Console.WriteLine();
             Console.WriteLine("Prime numbers that are Anagrams: ");
-            for (int i = 1; i < array.GetLength(1); i++) {
-                Console.Write(array[0, i] + " ");
+            for (int i = 1; i < array[0].Length; i++) {
+                Console.Write(array[0][i] + " ");
             }
 
             Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine("Prime numbers that are not Anagrams: ");
-            for (int i = 0; i < array.GetLength(1); i++)
+            for (int i = 0; i < array[1].Length; i++)
             {
-                if (array[1, i] == 0)
+                if (array[1][i] == 0)
                     break;
-                Console.Write(array[1, i] + " ");
+                Console.Write(array[1][i] + " ");
             }                
         }
     }

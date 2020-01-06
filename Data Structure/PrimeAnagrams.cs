@@ -4,6 +4,9 @@ namespace Data_Structure
 {
     class PrimeAnagrams
     {
+        /// <summary>
+        /// Anagrams this instance.
+        /// </summary>
         public void Anagram() {
             int[] primes = new int[169];
             int j = 0;

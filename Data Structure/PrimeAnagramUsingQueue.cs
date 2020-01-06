@@ -4,6 +4,9 @@ namespace Data_Structure
 {
     class PrimeAnagramUsingQueue
     {
+        /// <summary>
+        /// Prints the anagram.
+        /// </summary>
         public void printAnagram() {
             int[] primes = new int[169];
             int j = 0;

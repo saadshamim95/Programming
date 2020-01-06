@@ -4,6 +4,9 @@ namespace Data_Structure
 {
     class PrimeAnagramUsingStack
     {
+        /// <summary>
+        /// Reverses the printing.
+        /// </summary>
         public void reversePrinting() {
             int[] primes = new int[169];
             int j = 0;

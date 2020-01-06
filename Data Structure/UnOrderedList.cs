@@ -5,6 +5,9 @@ namespace Data_Structure
 {
     class UnOrderedList
     {
+        /// <summary>
+        /// Runs this instance.
+        /// </summary>
         public void Run()
         {
             LinkedList<string> linkedList = new LinkedList<string>();

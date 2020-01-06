@@ -211,6 +211,10 @@ namespace Data_Structure
             return current.data;
         }
 
+        /// <summary>
+        /// Removes the front.
+        /// </summary>
+        /// <returns></returns>
         public T removeFront() {
             T item = head.data;
             head = head.next;
@@ -229,6 +233,9 @@ namespace Data_Structure
             Console.WriteLine(n.data);
         }
 
+        /// <summary>
+        /// Printtoes the file.
+        /// </summary>
         public void PrinttoFile() {
             Node n = head;
             StreamWriter streamWriter = new StreamWriter(@"C:\Users\Saad Shamim\source\repos\Programming\Data Structure\Output.txt");

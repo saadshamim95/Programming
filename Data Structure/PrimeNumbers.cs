@@ -4,6 +4,9 @@ namespace Data_Structure
 {
     class PrimeNumbers
     {
+        /// <summary>
+        /// Primes this instance.
+        /// </summary>
         public void prime() {
             int[,] prime = new int[10,26];
             int k;

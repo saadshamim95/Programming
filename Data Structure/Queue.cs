@@ -83,6 +83,10 @@ namespace Data_Structure
             }
         }
 
+        /// <summary>
+        /// Returns the front.
+        /// </summary>
+        /// <returns></returns>
         public T returnFront() {
             return array[front];
         }

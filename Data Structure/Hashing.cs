@@ -58,6 +58,10 @@ namespace Data_Structure
                 Console.WriteLine("32 Not Found...");
         }
 
+        /// <summary>
+        /// Prints the specified array.
+        /// </summary>
+        /// <param name="array">The array.</param>
         public void print(OrderedLinkedList<int>[] array) {
             for (int i = 0; i < array.Length; i++)
             {

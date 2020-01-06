@@ -112,6 +112,11 @@ namespace Data_Structure
             return count;
         }
 
+        /// <summary>
+        /// Indexes the specified data.
+        /// </summary>
+        /// <param name="data">The data.</param>
+        /// <returns></returns>
         public int index(T data) {
             int pos = 0;
             Node current = head;
@@ -124,6 +129,10 @@ namespace Data_Structure
             return pos;
         }
 
+        /// <summary>
+        /// Pops this instance.
+        /// </summary>
+        /// <returns></returns>
         public T pop() {
             T temp;
             Node current = head;
@@ -139,6 +148,11 @@ namespace Data_Structure
             return temp;
         }
 
+        /// <summary>
+        /// Pops the specified position.
+        /// </summary>
+        /// <param name="position">The position.</param>
+        /// <returns></returns>
         public T pop(int position) {
             Node current = head;
             Node prev = null;
@@ -166,6 +180,10 @@ namespace Data_Structure
             Console.WriteLine(node.data);
         }
 
+        /// <summary>
+        /// Prints to file.
+        /// </summary>
+        /// <param name="value">if set to <c>true</c> [value].</param>
         public void PrintToFile(bool value)
         {
             if (size() == 0)

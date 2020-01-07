@@ -1,0 +1,48 @@
+{
+  "RiceList": [
+    {
+      "Name": "White",
+      "Weight": 20,
+      "Price": 40
+    },
+    {
+      "Name": "Brown",
+      "Weight": 25,
+      "Price": 50
+    },
+    {
+      "Name": "Basmati",
+      "Weight": 30,
+      "Price": 100
+    }
+  ],
+  "Pulse": [
+    {
+      "Name": "Moong",
+      "Weight": 10,
+      "Price": 60
+    },
+    {
+      "Name": "Arhar",
+      "Weight": 15,
+      "Price": 80
+    },
+    {
+      "Name": "Chana",
+      "Weight": 18,
+      "Price": 70
+    }
+  ],
+  "Wheat": [
+    {
+      "Name": "Hard Red",
+      "Weight": 15,
+      "Price": 20
+    },
+    {
+      "Name": "Soft Red",
+      "Weight": 20,
+      "Price": 25
+    }
+  ]
+}

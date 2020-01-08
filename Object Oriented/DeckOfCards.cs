@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Object_Oriented
 {
@@ -15,11 +13,8 @@ namespace Object_Oriented
 
             Randomize(cards);
 
-            bool[] avail = new bool[52];
-            /*Console.WriteLine("After Shuffling:");
-            for (int i = 0; i < cards.Length; i++)
-                Console.Write(cards[i] + " ");*/
-
+            //bool[] avail = new bool[52];
+            
             int k = 0;
             string[,] player = new string[4, 9];
             for (int i = 0; i < 4; i++) {
@@ -28,14 +23,17 @@ namespace Object_Oriented
                 }
             }
 
+            string[] player0 = new string[9];
             k = 0;
-            for (int i = 0; i < 4; i++) {
+            for (int i = 0; i < 1; i++) {
                 Console.Write("Player {0}: ", (i + 1));
                 for (int j = 0; j < 9; j++) {
+                    player0[k] = cards[k];
                     Console.Write(cards[k++]+" ");
                 }
                 Console.WriteLine();
             }
+            Player player1 = new Player(player0);
         }
 
         public string[] Randomize(string[] cards) {

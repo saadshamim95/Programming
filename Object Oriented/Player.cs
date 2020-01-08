@@ -4,8 +4,17 @@ using System.Text;
 
 namespace Object_Oriented
 {
-    class Player
+    public class Player
     {
+        public Player(string[] array) {
+            QueueLinkedList<string> queueLinkedList = new QueueLinkedList<string>();
+            for (int i = 0; i < array.Length; i++)
+                queueLinkedList.enqueue(array[i]);
+            Console.WriteLine(queueLinkedList);
+        }
 
+        public void sort() { 
+            
+        }
     }
 }

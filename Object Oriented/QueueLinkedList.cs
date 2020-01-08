@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Data_Structure
+namespace Object_Oriented
 {
     class QueueLinkedList<T>
     {
@@ -10,7 +10,8 @@ namespace Data_Structure
         /// Enqueues the specified data.
         /// </summary>
         /// <param name="data">The data.</param>
-        public void enqueue(T data) {
+        public void enqueue(T data)
+        {
             LinkedList.add(data);
         }
 
@@ -18,7 +19,8 @@ namespace Data_Structure
         /// Dequeues this instance.
         /// </summary>
         /// <returns></returns>
-        public T dequeue() {
+        public T dequeue()
+        {
             T item = LinkedList.removeFront();
             return item;
         }
@@ -29,7 +31,8 @@ namespace Data_Structure
         /// <returns>
         ///   <c>true</c> if this instance is empty; otherwise, <c>false</c>.
         /// </returns>
-        public bool isEmpty() {
+        public bool isEmpty()
+        {
             return LinkedList.isEmpty();
         }
 
@@ -37,7 +40,8 @@ namespace Data_Structure
         /// Sizes this instance.
         /// </summary>
         /// <returns></returns>
-        public int size() {
+        public int size()
+        {
             return LinkedList.size();
         }
     }

@@ -38,7 +38,5 @@ namespace Data_Structure
         public void print(WeekDay obj) {
             Console.WriteLine("Day: {0} Date: {1}",obj.day,obj.date);
         }
-
-
     }
 }

@@ -6,11 +6,11 @@ namespace Object_Oriented
     {
         static void Main(string[] args)
         {
-            /*StudentTest studentTest = new StudentTest();
-            studentTest.Test();*/
+            InventoryManager manager = new InventoryManager();
+            manager.Test();
 
-            InventoryTest inventoryTest = new InventoryTest();
-            inventoryTest.Test();
+            StockPortfolio portfolio = new StockPortfolio();
+            portfolio.Test();
         }
     }
 }

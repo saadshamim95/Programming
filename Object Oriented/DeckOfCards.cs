@@ -14,11 +14,28 @@ namespace Object_Oriented
                 "S-2", "S-3", "S-4", "S-5", "S-6", "S-7", "S-8", "S-9", "S-10", "S-Jack", "S-Queen", "S-King", "S-Ace" };
 
             Randomize(cards);
+
+            bool[] avail = new bool[52];
             /*Console.WriteLine("After Shuffling:");
             for (int i = 0; i < cards.Length; i++)
                 Console.Write(cards[i] + " ");*/
 
+            int k = 0;
+            string[,] player = new string[4, 9];
+            for (int i = 0; i < 4; i++) {
+                for (int j = 0; j < 9; j++) {
+                    player[i, j]= cards[k++];
+                }
+            }
 
+            k = 0;
+            for (int i = 0; i < 4; i++) {
+                Console.Write("Player {0}: ", (i + 1));
+                for (int j = 0; j < 9; j++) {
+                    Console.Write(cards[k++]+" ");
+                }
+                Console.WriteLine();
+            }
         }
 
         public string[] Randomize(string[] cards) {

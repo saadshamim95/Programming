@@ -6,11 +6,14 @@ namespace Object_Oriented
     {
         static void Main(string[] args)
         {
-            InventoryManager manager = new InventoryManager();
+            /*InventoryManager manager = new InventoryManager();
             manager.Test();
 
             StockPortfolio portfolio = new StockPortfolio();
-            portfolio.Test();
+            portfolio.Test();*/
+
+            DeckOfCards deck = new DeckOfCards();
+            deck.Initialize();
         }
     }
 }

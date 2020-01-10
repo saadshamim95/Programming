@@ -22,10 +22,8 @@ namespace Data_Structure
             Console.WriteLine("10: Prime Anagrams using Stack");
             Console.WriteLine("11: Prime Anagrams using Queue");
             Console.WriteLine("12: Calender - Printing Month");
-            Console.WriteLine("13: Week");
-            Console.WriteLine("14: Question 14");
             int choice = 0;
-            while (!(choice > 0 && choice < 15))
+            while (!(choice > 0 && choice < 13))
             {
                 try
                 {
@@ -86,12 +84,6 @@ namespace Data_Structure
                 case 12:
                     Calendar calendar = new Calendar();
                     calendar.printMonth();
-                    break;
-                case 13:
-                    Week week = new Week();
-                    week.Test();
-                    break;
-                case 14:
                     break;
             }
         }

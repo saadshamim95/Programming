@@ -9,10 +9,10 @@ namespace Object_Oriented
             StudentTest studentTest = new StudentTest();
             studentTest.Test();
 
-            /*InventoryManager manager = new InventoryManager();
+            InventoryManager manager = new InventoryManager();
             manager.Test();
 
-            StockPortfolio portfolio = new StockPortfolio();
+            /*StockPortfolio portfolio = new StockPortfolio();
             portfolio.Test();
 
             DeckOfCards deck = new DeckOfCards();

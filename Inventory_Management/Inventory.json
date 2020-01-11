@@ -1,0 +1,48 @@
+{
+  "RiceList": [
+    {
+      "Name": "White Rice",
+      "Weight": 20,
+      "Price": 40
+    },
+    {
+      "Name": "Brown Rice",
+      "Weight": 25,
+      "Price": 50
+    },
+    {
+      "Name": "Basmati Rice",
+      "Weight": 30,
+      "Price": 100
+    }
+  ],
+  "PulseList": [
+    {
+      "Name": "Moong Dal",
+      "Weight": 10,
+      "Price": 60
+    },
+    {
+      "Name": "Arhar Dal",
+      "Weight": 15,
+      "Price": 80
+    },
+    {
+      "Name": "Chana Dal",
+      "Weight": 18,
+      "Price": 70
+    }
+  ],
+  "WheatList": [
+    {
+      "Name": "Hard Red",
+      "Weight": 15,
+      "Price": 20
+    },
+    {
+      "Name": "Soft Red",
+      "Weight": 20,
+      "Price": 25
+    }
+  ]
+}

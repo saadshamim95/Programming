@@ -6,7 +6,14 @@ namespace Object_Oriented
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            /*InventoryManager manager = new InventoryManager();
+            manager.Test();
+
+            StockPortfolio portfolio = new StockPortfolio();
+            portfolio.Test();*/
+
+            DeckOfCards deck = new DeckOfCards();
+            deck.Initialize();
         }
     }
 }

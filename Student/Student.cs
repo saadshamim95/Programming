@@ -12,7 +12,7 @@ namespace Object_Oriented
 
         public override string ToString()
         {
-            return String.Format("Id: {0},\nName: {1}\nHobbies: {2}", Id, Name, string.Join(",", Hobbies.ToArray()));
+            return String.Format("Id: {0},\nName: {1},\nHobbies: {2}", Id, Name, string.Join(",", Hobbies.ToArray()));
         }
     }
 }

@@ -20,10 +20,10 @@ namespace Object_Oriented
 
             string strJSONResult = JsonConvert.SerializeObject(student);
             
-            File.WriteAllText(@"C:\Users\Saad Shamim\Source\Repos\Programming\Object Oriented\Student\student.json", strJSONResult);
+            File.WriteAllText(@"C:\Users\ye10398\source\repos\saadshamim95\Programming\Object Oriented\Student\student.json", strJSONResult);
             Console.WriteLine("Stored!!!");
 
-            strJSONResult = File.ReadAllText(@"C:\Users\Saad Shamim\Source\Repos\Programming\Object Oriented\Student\student.json");
+            strJSONResult = File.ReadAllText(@"C:\Users\ye10398\source\repos\saadshamim95\Programming\Object Oriented\Student\student.json");
 
             Student result = JsonConvert.DeserializeObject<Student>(strJSONResult);
             Console.WriteLine(result.ToString());

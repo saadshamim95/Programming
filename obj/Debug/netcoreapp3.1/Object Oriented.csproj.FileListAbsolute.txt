@@ -1,0 +1,13 @@
+C:\Users\ye10398\source\repos\saadshamim95\Programming\Object Oriented\bin\Debug\netcoreapp3.1\Object Oriented.exe
+C:\Users\ye10398\source\repos\saadshamim95\Programming\Object Oriented\obj\Debug\netcoreapp3.1\Object Oriented.csprojAssemblyReference.cache
+C:\Users\ye10398\source\repos\saadshamim95\Programming\Object Oriented\obj\Debug\netcoreapp3.1\Object Oriented.AssemblyInfoInputs.cache
+C:\Users\ye10398\source\repos\saadshamim95\Programming\Object Oriented\obj\Debug\netcoreapp3.1\Object Oriented.AssemblyInfo.cs
+C:\Users\ye10398\source\repos\saadshamim95\Programming\Object Oriented\bin\Debug\netcoreapp3.1\Object Oriented.deps.json
+C:\Users\ye10398\source\repos\saadshamim95\Programming\Object Oriented\bin\Debug\netcoreapp3.1\Object Oriented.runtimeconfig.json
+C:\Users\ye10398\source\repos\saadshamim95\Programming\Object Oriented\bin\Debug\netcoreapp3.1\Object Oriented.runtimeconfig.dev.json
+C:\Users\ye10398\source\repos\saadshamim95\Programming\Object Oriented\bin\Debug\netcoreapp3.1\Object Oriented.dll
+C:\Users\ye10398\source\repos\saadshamim95\Programming\Object Oriented\bin\Debug\netcoreapp3.1\Object Oriented.pdb
+C:\Users\ye10398\source\repos\saadshamim95\Programming\Object Oriented\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\ye10398\source\repos\saadshamim95\Programming\Object Oriented\obj\Debug\netcoreapp3.1\Object Oriented.csproj.CopyComplete
+C:\Users\ye10398\source\repos\saadshamim95\Programming\Object Oriented\obj\Debug\netcoreapp3.1\Object Oriented.dll
+C:\Users\ye10398\source\repos\saadshamim95\Programming\Object Oriented\obj\Debug\netcoreapp3.1\Object Oriented.pdb

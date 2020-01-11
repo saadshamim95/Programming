@@ -15,8 +15,8 @@ namespace Object_Oriented
             StockPortfolio portfolio = new StockPortfolio();
             portfolio.Test();
 
-            /*DeckOfCards deck = new DeckOfCards();
-            deck.Initialize();*/
+            DeckOfCards deck = new DeckOfCards();
+            deck.Initialize();
         }
     }
 }

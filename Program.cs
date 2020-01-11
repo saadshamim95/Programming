@@ -12,10 +12,10 @@ namespace Object_Oriented
             InventoryManager manager = new InventoryManager();
             manager.Test();
 
-            /*StockPortfolio portfolio = new StockPortfolio();
+            StockPortfolio portfolio = new StockPortfolio();
             portfolio.Test();
 
-            DeckOfCards deck = new DeckOfCards();
+            /*DeckOfCards deck = new DeckOfCards();
             deck.Initialize();*/
         }
     }

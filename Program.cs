@@ -6,17 +6,51 @@ namespace Object_Oriented
     {
         static void Main(string[] args)
         {
-            /*StudentTest studentTest = new StudentTest();
-            studentTest.Test();
+            Console.WriteLine("1: Student");
+            Console.WriteLine("2: Inventory management for Rice, Pulses, Wheat");
+            Console.WriteLine("3: Stock Portfolio");
+            Console.WriteLine("4: Stock Account Management");
+            Console.WriteLine("5: Deck of Cards");
+            Console.WriteLine("6: Clinique Management");
+            int choice = 0;
+            while (!(choice > 0 && choice < 7))
+            {
+                try
+                {
+                    Console.Write("Enter your choice: ");
+                    choice = Convert.ToInt32(Console.ReadLine());
+                }
+                catch (FormatException exception)
+                {
+                    Console.WriteLine(exception);
+                }
+            }
 
-            InventoryManager manager = new InventoryManager();
-            manager.Test();
-
-            StockPortfolio portfolio = new StockPortfolio();
-            portfolio.Test();*/
-
-            DeckOfCards deck = new DeckOfCards();
-            deck.Initialize();
+            switch (choice)
+            {
+                case 1:
+                    StudentTest studentTest = new StudentTest();
+                    studentTest.Test();
+                    break;
+                case 2:
+                    InventoryManager manager = new InventoryManager();
+                    manager.Test();
+                    break;
+                case 3:
+                    StockPortfolio portfolio = new StockPortfolio();
+                    portfolio.Test();
+                    break;
+                case 4:
+                    
+                    break;
+                case 5:
+                    DeckOfCards deck = new DeckOfCards();
+                    deck.Initialize();
+                    break;
+                default:
+                    Console.WriteLine("Wrong Input");
+                    break;
+            }
         }
     }
 }

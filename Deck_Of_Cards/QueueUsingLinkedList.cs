@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Object_Oriented
 {
@@ -9,6 +7,11 @@ namespace Object_Oriented
         public class Node {
             public T data;
             public Node next;
+
+            /// <summary>
+            /// Initializes a new instance of the <see cref="Node"/> class.
+            /// </summary>
+            /// <param name="value">The value.</param>
             public Node(T value) {
                 data = value;
                 next = null;

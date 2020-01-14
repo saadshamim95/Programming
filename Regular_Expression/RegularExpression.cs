@@ -6,8 +6,8 @@ namespace Object_Oriented
     class RegularExpression
     {
         public void checkExpression() {
-            string text = "Hello <<name>>,\n" +
-                "We have your full name as <<full name>> in our system. Your contact number is 91-xxxxxxxxxx." +
+            string text = "Hello <<name>>," +
+                "\nWe have your full name as <<full name>> in our system. Your contact number is 91-xxxxxxxxxx." +
                 "\nPlease, let us know in case of any clarification." +
                 "\n\nThank you" +
                 "\nBridgeLabz xx/xx/xxxx";

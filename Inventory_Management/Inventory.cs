@@ -4,26 +4,34 @@ namespace Object_Oriented
 {
     public class Inventory
     {
-        public List<Rice> RiceList { get; set; }
-        public List<Pulse> PulseList { get; set; }
-        public List<Wheat> WheatList { get; set; }
+        /// <summary>
+        /// Gets or sets the rice list.
+        /// </summary>
+        /// <value>
+        /// The rice list.
+        /// </value>
+        public List<Item> RiceList { get; set; }
 
-        public class Rice { 
+        /// <summary>
+        /// Gets or sets the pulse list.
+        /// </summary>
+        /// <value>
+        /// The pulse list.
+        /// </value>
+        public List<Item> PulseList { get; set; }
+
+        /// <summary>
+        /// Gets or sets the wheat list.
+        /// </summary>
+        /// <value>
+        /// The wheat list.
+        /// </value>
+        public List<Item> WheatList { get; set; }
+
+        public class Item { 
             public string Name { get; set; }
             public int Weight { get; set; }
             public int Price { get; set; }
-        }
-
-        public class Pulse {
-            public string Name { get; set; }
-            public int Weight { get; set; }
-            public int Price { get; set; }
-        }
-
-        public class Wheat {
-            public string Name { get; set; }
-            public int Weight { get; set; }
-            public int Price { get; set; }
-        }
+        }       
     }
 }

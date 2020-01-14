@@ -11,9 +11,10 @@ namespace Object_Oriented
             Console.WriteLine("3: Stock Portfolio");
             Console.WriteLine("4: Stock Account Management");
             Console.WriteLine("5: Deck of Cards");
-            Console.WriteLine("6: Clinique Management");
+            Console.WriteLine("6: Regular Expression");
+            Console.WriteLine("7: Clinique Management");
             int choice = 0;
-            while (!(choice > 0 && choice < 7))
+            while (!(choice > 0 && choice < 8))
             {
                 try
                 {
@@ -46,6 +47,13 @@ namespace Object_Oriented
                 case 5:
                     DeckOfCards deck = new DeckOfCards();
                     deck.Initialize();
+                    break;
+                case 6:
+                    RegularExpression regularExpression = new RegularExpression();
+                    regularExpression.checkExpression();
+                    break;
+                case 7:
+
                     break;
                 default:
                     Console.WriteLine("Wrong Input");

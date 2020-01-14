@@ -7,6 +7,9 @@ namespace Object_Oriented
 {
     class StockPortfolio
     {
+        /// <summary>
+        /// Tests this instance.
+        /// </summary>
         public void Test()
         {
             string strJSONResult = File.ReadAllText(@"C:\Users\ye10398\source\repos\saadshamim95\Programming\Object Oriented\Stock_Management\Stock.json");

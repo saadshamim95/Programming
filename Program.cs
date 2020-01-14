@@ -7,14 +7,15 @@ namespace Object_Oriented
         static void Main(string[] args)
         {
             Console.WriteLine("1: Student");
-            Console.WriteLine("2: Inventory management for Rice, Pulses, Wheat");
-            Console.WriteLine("3: Stock Portfolio");
-            Console.WriteLine("4: Stock Account Management");
-            Console.WriteLine("5: Deck of Cards");
-            Console.WriteLine("6: Regular Expression");
-            Console.WriteLine("7: Clinique Management");
+            Console.WriteLine("2: Address Book");
+            Console.WriteLine("3: Inventory management for Rice, Pulses, Wheat");
+            Console.WriteLine("4: Stock Portfolio");
+            Console.WriteLine("5: Stock Account Management");
+            Console.WriteLine("6: Deck of Cards");
+            Console.WriteLine("7: Regular Expression");
+            Console.WriteLine("8: Clinique Management");
             int choice = 0;
-            while (!(choice > 0 && choice < 8))
+            while (!(choice > 0 && choice < 9))
             {
                 try
                 {
@@ -34,29 +35,34 @@ namespace Object_Oriented
                     studentTest.Test();
                     break;
                 case 2:
+                    AddressBook addressBook = new AddressBook();
+                    addressBook.operate();
+                    break;
+                case 3:
                     InventoryManager manager = new InventoryManager();
                     manager.Test();
                     break;
-                case 3:
+                case 4:
                     StockPortfolio portfolio = new StockPortfolio();
                     portfolio.Test();
                     break;
-                case 4:
-                    
-                    break;
                 case 5:
+                    CommercialDataProcessing dataProcessing = new CommercialDataProcessing();
+                    dataProcessing.Test();
+                    break;
+                case 6:
                     DeckOfCards deck = new DeckOfCards();
                     deck.Initialize();
                     break;
-                case 6:
+                case 7:
                     RegularExpression regularExpression = new RegularExpression();
                     regularExpression.checkExpression();
                     break;
-                case 7:
+                case 8:
 
                     break;
                 default:
-                    Console.WriteLine("Wrong Input");
+                    Console.WriteLine("Invalid Input!!!");
                     break;
             }
         }

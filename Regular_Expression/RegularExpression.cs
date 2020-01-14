@@ -5,6 +5,9 @@ namespace Object_Oriented
 {
     class RegularExpression
     {
+        /// <summary>
+        /// Checks the expression.
+        /// </summary>
         public void checkExpression() {
             string text = "Hello <<name>>," +
                 "\nWe have your full name as <<full name>> in our system. Your contact number is 91-xxxxxxxxxx." +
@@ -39,6 +42,13 @@ namespace Object_Oriented
             }
         }
 
+        /// <summary>
+        /// Replaces the pattern.
+        /// </summary>
+        /// <param name="text">The text.</param>
+        /// <param name="check">The check.</param>
+        /// <param name="pattern">The pattern.</param>
+        /// <returns></returns>
         public string replacePattern(string text, string check,string pattern) {
             Regex regex = new Regex(pattern);
             string newString = regex.Replace(text, check);

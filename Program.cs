@@ -17,6 +17,7 @@ namespace Object_Oriented
             Console.WriteLine("5: Stock Account Management");
             Console.WriteLine("6: Deck of Cards");
             Console.WriteLine("7: Regular Expression");
+            Console.WriteLine();
             int choice = 0;
             Console.Write("Enter your choice: ");
             choice = Convert.ToInt32(Console.ReadLine());
@@ -53,6 +54,8 @@ namespace Object_Oriented
                     break;
                 default:
                     Console.WriteLine("Invalid Input!!!");
+                    Console.WriteLine();
+                    Main(args);
                     break;
             }
         }

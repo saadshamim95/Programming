@@ -7,7 +7,7 @@ namespace Object_Oriented
     class CommercialDataProcessing
     {
         public void Test() {
-            StockAccount stockAccount = new StockAccount("test.txt");
+            StockAccount stockAccount = new StockAccount("Test");
         }
     }
 }

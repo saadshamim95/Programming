@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 
+
 namespace Object_Oriented
 {
     class StockAccount
@@ -8,9 +9,16 @@ namespace Object_Oriented
         /// <summary>
         /// Initializes a new instance of the <see cref="StockAccount"/> class.
         /// </summary>
+        public StockAccount() { 
+        
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="StockAccount"/> class.
+        /// </summary>
         /// <param name="fileName">Name of the file.</param>
         public StockAccount(string fileName) {
-            string path= @"C:\Users\ye10398\source\repos\saadshamim95\Programming\Object Oriented\Commercial_Data_Processing\" + fileName;
+            string path = @"C:\Users\ye10398\source\repos\saadshamim95\Programming\Object Oriented\Commercial_Data_Processing\" + fileName + ".json";
             File.Create(path);
             Console.WriteLine("File Created!!!");
         }

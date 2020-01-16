@@ -6,19 +6,7 @@ namespace Object_Oriented
 {
     class Modelling
     {
-        public List<Item> Records { get; set; }
-
-        public class Item {
-            public string First { get; set; }
-            public string Last { get; set; }
-            public string Address { get; set; }
-            public string City { get; set; }
-            public string State { get; set; }
-            public int Zip { get; set; }
-            public long Number { get; set; }
-        }
-        
-        /*private string first;
+        private string first;
         private string last;
         private string address;
         private string city;
@@ -121,6 +109,6 @@ namespace Object_Oriented
         public long Number {
             get { return this.number; }
             set { this.number = value; }
-        }*/
+        }
     }
 }

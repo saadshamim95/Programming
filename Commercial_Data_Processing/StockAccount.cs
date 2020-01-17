@@ -1,68 +1,80 @@
-﻿using System;
-using System.IO;
-
+﻿//-----------------------------------------------------------------------
+// <copyright file="StockAccount.cs" company="BridgeLabz">
+//     Copyright © 2020 Company="BridgeLabz"
+// </copyright>
+// <creator name="Saad Shamim"/>
+//-----------------------------------------------------------------------
 
 namespace Object_Oriented
 {
-    class StockAccount
+    using System;
+
+    /// <summary>
+    /// Class for Stock Account
+    /// </summary>
+    public class StockAccount
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="StockAccount"/> class.
+        /// Tests this instance.
         /// </summary>
-        public StockAccount() { 
-        
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="StockAccount"/> class.
-        /// </summary>
-        /// <param name="fileName">Name of the file.</param>
-        public StockAccount(string fileName) {
-            string path = @"C:\Users\ye10398\source\repos\saadshamim95\Programming\Object Oriented\Commercial_Data_Processing\" + fileName + ".json";
-            File.Create(path);
-            Console.WriteLine("File Created!!!");
-        }
-
-        /// <summary>
-        /// Values the of.
-        /// </summary>
-        /// <returns></returns>
-        public double valueOf() {
-            double value = 0;
-            return value;
-        }
-
-        /// <summary>
-        /// Buys the specified amount.
-        /// </summary>
-        /// <param name="amount">The amount.</param>
-        /// <param name="symbol">The symbol.</param>
-        public void buy(int amount, string symbol) { 
-        
-        }
-
-        /// <summary>
-        /// Sells the specified amount.
-        /// </summary>
-        /// <param name="amount">The amount.</param>
-        /// <param name="symbol">The symbol.</param>
-        public void sell(int amount, string symbol) { 
-        
-        }
-
-        /// <summary>
-        /// Saves the specified file name.
-        /// </summary>
-        /// <param name="fileName">Name of the file.</param>
-        public void save(string fileName) { 
-        
-        }
-
-        /// <summary>
-        /// Prints the report.
-        /// </summary>
-        public void printReport() { 
-        
+        public void Test()
+        {
+            Console.WriteLine("1: Create New Account");
+            Console.WriteLine("2: Buy Share");
+            Console.WriteLine("3: Sell Share");
+            Console.WriteLine("4: Print Shares of Particular Account");
+            Console.WriteLine("5: Display Overall Company Share");
+            Console.WriteLine("6: Exit");
+            Console.WriteLine();
+            Console.Write("Enter your Choice: ");
+            int choice = Convert.ToInt32(Console.ReadLine());
+            string account;
+            switch (choice)
+            {
+                case 1:
+                    Console.Write("Enter Account Name: ");
+                    account = Console.ReadLine();
+                    CreateAccount.Create(account);
+                    Console.WriteLine();
+                    this.Test();
+                    break;
+                case 2:
+                    Console.Write("Enter Account Name: ");
+                    account = Console.ReadLine();
+                    BuyStock buyStock = new BuyStock();
+                    buyStock.BuyShares(account);
+                    Console.WriteLine();
+                    this.Test();
+                    break;
+                case 3:
+                    Console.Write("Enter Account Name: ");
+                    account = Console.ReadLine();
+                    SellStock sellStock = new SellStock();
+                    sellStock.SellShares(account);
+                    Console.WriteLine();
+                    this.Test();
+                    break;
+                case 4:
+                    Console.Write("Enter Account Name: ");
+                    account = Console.ReadLine();
+                    Display display = new Display();
+                    display.DisplayShares(account);
+                    Console.WriteLine();
+                    this.Test();
+                    break;
+                case 5:
+                    Display displayCompany = new Display();
+                    displayCompany.DisplayShares("Company");
+                    Console.WriteLine();
+                    this.Test();
+                    break;
+                case 6:
+                    break;
+                default:
+                    Console.WriteLine("Invalid Input!!!\n");
+                    this.Test();
+                    break;
+            }
         }
     }
 }

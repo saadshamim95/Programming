@@ -2,13 +2,18 @@
   "Saad": [
     {
       "Stock Symbol": "TCS",
-      "Number of Shares": 400,
+      "Number of Shares": 750,
       "Share Price": 2233
     },
     {
       "Stock Symbol": "Reliance",
       "Number of Shares": 200,
       "Share Price": 1570
+    },
+    {
+      "Stock Symbol": "Kotak",
+      "Number of Shares": 650,
+      "Share Price": 1701
     }
   ]
 }

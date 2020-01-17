@@ -1,14 +1,24 @@
-﻿using System;
+﻿//-----------------------------------------------------------------------
+// <copyright file="Program.cs" company="BridgeLabz">
+//     Company copyright tag.
+// </copyright>
+// <creator name="Saad Shamim"/>
+//-----------------------------------------------------------------------
 
 namespace Object_Oriented
 {
-    class Program
+    using System;
+
+    /// <summary>
+    /// This is the main program
+    /// </summary>
+    public class Program
     {
         /// <summary>
         /// Defines the entry point of the application.
         /// </summary>
         /// <param name="args">The arguments.</param>
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             Console.WriteLine("1: Student");
             Console.WriteLine("2: Address Book");
@@ -41,8 +51,8 @@ namespace Object_Oriented
                     portfolio.Test();
                     break;
                 case 5:
-                    CommercialDataProcessing dataProcessing = new CommercialDataProcessing();
-                    dataProcessing.Test();
+                    StockAccount stockAccount = new StockAccount();
+                    stockAccount.Test();
                     break;
                 case 6:
                     DeckOfCards deck = new DeckOfCards();

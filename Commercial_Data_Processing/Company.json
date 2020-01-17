@@ -7,7 +7,7 @@
     },
     {
       "Stock Symbol": "TCS",
-      "Number of Shares": 600,
+      "Number of Shares": 100,
       "Share Price": 2233
     },
     {
@@ -22,7 +22,7 @@
     },
     {
       "Stock Symbol": "Kotak",
-      "Number of Shares": 1000,
+      "Number of Shares": 350,
       "Share Price": 1701
     }
   ]

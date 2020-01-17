@@ -1,0 +1,29 @@
+{
+  "Company": [
+    {
+      "Stock Symbol": "Reliance",
+      "Number of Shares": 1000,
+      "Share Price": 1570
+    },
+    {
+      "Stock Symbol": "TCS",
+      "Number of Shares": 1000,
+      "Share Price": 2233
+    },
+    {
+      "Stock Symbol": "Tata",
+      "Number of Shares": 1000,
+      "Share Price": 199
+    },
+    {
+      "Stock Symbol": "Axis",
+      "Number of Shares": 1000,
+      "Share Price": 739
+    },
+    {
+      "Stock Symbol": "Kotak",
+      "Number of Shares": 1000,
+      "Share Price": 1701
+    }
+  ]
+}

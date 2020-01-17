@@ -1,0 +1,14 @@
+{
+  "Mayank": [
+    {
+      "Stock Symbol": "Reliance",
+      "Number of Shares": 100,
+      "Share Price": 1570
+    },
+    {
+      "Stock Symbol": "TCS",
+      "Number of Shares": 350,
+      "Share Price": 2233
+    }
+  ]
+}

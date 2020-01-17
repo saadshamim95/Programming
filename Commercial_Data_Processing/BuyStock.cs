@@ -6,13 +6,12 @@ using System.Linq;
 
 namespace Object_Oriented
 {
-    class BuyNewStock
+    /// <summary>
+    /// Class for buying Stock
+    /// </summary>
+    class BuyStock
     {
-        /// <summary>
-        /// Buys the stock.
-        /// </summary>
-        /// <param name="fileName">Name of the file.</param>
-        public void BuyStock(string fileName)
+        public void BuyShares(string fileName)
         {
             string path = @"C:\Users\ye10398\source\repos\saadshamim95\Programming\Object Oriented\Commercial_Data_Processing\" + fileName + ".json";
             var jsonAccount = "";
@@ -45,20 +44,9 @@ namespace Object_Oriented
                 foreach (var stock in companyArray.Where(obj => obj["Stock Symbol"].Value<string>() == company))
                 {
                     foundCompany = true;
-
-                    foreach (var item in accountArray.Where(obj => obj["Stock Symbol"].Value<string>() == company))
-                    {
-                        stockFound = true;
-                    }
-
-                    if (stockFound == true)
-                    {
-                        Console.WriteLine("Stock for " + company + " already exist in portfolio!!!");
-                        
-                    }
-
                     Console.Write("Enter the number of Stock you want to buy: ");
                     int number = Convert.ToInt32(Console.ReadLine());
+
                     if (number > 0 && (int)stock["Number of Shares"] > number)
                     {
                         stock["Number of Shares"] = (int)stock["Number of Shares"] - number;
@@ -66,19 +54,32 @@ namespace Object_Oriented
                         string result = JsonConvert.SerializeObject(jObject, Formatting.Indented);
                         File.WriteAllText(pathCompany, result);
 
-                        string record = "{ 'Stock Symbol': '" + stock["Stock Symbol"] + "','Number of Shares': " + number + ",'Share Price': " + stock["Share Price"] + "}";
-                        var recordJson = JObject.Parse(record);
-                        accountArray.Add(recordJson);
-                        jsonObject[fileName] = accountArray;
-                        string newJsonResult = JsonConvert.SerializeObject(jsonObject, Formatting.Indented);
-                        File.WriteAllText(path, newJsonResult);
+                        foreach (var item in accountArray.Where(obj => obj["Stock Symbol"].Value<string>() == company))
+                        {
+                            stockFound = true;
+                            item["Number of Shares"] = (int)item["Number of Shares"] + number;
+                            jsonObject[fileName] = accountArray;
+                            string account = JsonConvert.SerializeObject(jsonObject, Formatting.Indented);
+                            File.WriteAllText(path, account);
+                            Console.WriteLine("Existing entry updated!!!");
+                        }
+                                                
+                        if(stockFound == false)
+                        {
+                            string record = "{ 'Stock Symbol': '" + stock["Stock Symbol"] + "','Number of Shares': " + number + ",'Share Price': " + stock["Share Price"] + "}";
+                            var recordJson = JObject.Parse(record);
+                            accountArray.Add(recordJson);
+                            jsonObject[fileName] = accountArray;
+                            string newJsonResult = JsonConvert.SerializeObject(jsonObject, Formatting.Indented);
+                            File.WriteAllText(path, newJsonResult);
+                            Console.WriteLine("New entry added!!!");
+                        }
                     }
                     else
-                        Console.WriteLine("Not enough stock available!!!");
+                        Console.WriteLine("Not enough stock available!!!");                                       
 
                     if (foundCompany == true)
                         break;
-
                 }
             }
         }

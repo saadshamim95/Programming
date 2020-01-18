@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="EagerInitialization.cs" company="BridgeLabz">
+// <copyright file="LazyInitializationSingleton.cs" company="BridgeLabz">
 //     Copyright © 2020 Company="BridgeLabz"
 // </copyright>
 // <creator name="Saad Shamim"/>
@@ -10,31 +10,36 @@ namespace Design_Pattern
     using System;
 
     /// <summary>
-    /// Class for Eager Initialization of instance
+    /// Class for Lazy Initialization
     /// </summary>
-    public class EagerInitialization
+    public class LazyInitializationSingleton
     {
         /// <summary>
         /// The instance
         /// </summary>
-        private static EagerInitialization instance = new EagerInitialization();
+        private static LazyInitializationSingleton instance;
 
         /// <summary>
-        /// Prevents a default instance of the <see cref="EagerInitialization"/> class from being created.
+        /// Prevents a default instance of the <see cref="LazyInitializationSingleton"/> class from being created.
         /// </summary>
-        private EagerInitialization()
+        private LazyInitializationSingleton()
         {
-            Console.WriteLine("Instance created with Eager Initialization!!!");
+            Console.WriteLine("Instance created with Lazy Initialization!!!");
         }
 
         /// <summary>
         /// Gets the instance.
         /// </summary>
         /// <returns>Instance of a Singleton class</returns>
-        public static EagerInitialization GetInstance
+        public static LazyInitializationSingleton GetInstance
         {
             get
             {
+                if (instance == null)
+                {
+                    instance = new LazyInitializationSingleton();
+                }
+
                 return instance;
             }           
         }

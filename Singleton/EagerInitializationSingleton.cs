@@ -1,45 +1,40 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="LazyInitialization.cs" company="BridgeLabz">
+// <copyright file="EagerInitializationSingleton.cs" company="BridgeLabz">
 //     Copyright © 2020 Company="BridgeLabz"
 // </copyright>
 // <creator name="Saad Shamim"/>
 //-----------------------------------------------------------------------
 
-using System;
-
 namespace Design_Pattern
 {
+    using System;
+
     /// <summary>
-    /// Class for Lazy initialization of instance
+    /// Class for Eager Initialization
     /// </summary>
-    public class LazyInitialization
+    public class EagerInitializationSingleton
     {
         /// <summary>
         /// The instance
         /// </summary>
-        private static LazyInitialization instance;
+        private static EagerInitializationSingleton instance = new EagerInitializationSingleton();
 
         /// <summary>
-        /// Prevents a default instance of the <see cref="LazyInitialization"/> class from being created.
+        /// Prevents a default instance of the <see cref="EagerInitializationSingleton"/> class from being created.
         /// </summary>
-        private LazyInitialization()
+        private EagerInitializationSingleton()
         {
-            Console.WriteLine("Instance created with Lazy Initialization!!!");
+            Console.WriteLine("Instance created with Eager Initialization!!!");
         }
 
         /// <summary>
         /// Gets the instance.
         /// </summary>
         /// <returns>Instance of a Singleton class</returns>
-        public static LazyInitialization GetInstance
+        public static EagerInitializationSingleton GetInstance
         {
             get
             {
-                if (instance == null)
-                {
-                    instance = new LazyInitialization();
-                }
-
                 return instance;
             }           
         }

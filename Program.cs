@@ -6,7 +6,8 @@ namespace Design_Pattern
     {
         static void Main(string[] args)
         {
-            EagerInitialization initialization = EagerInitialization.GetInstance;
+            EagerInitialization eagerInitialization = EagerInitialization.GetInstance;
+            StaticBlockInitialization staticBlockInitialization = StaticBlockInitialization.GetInstance;
         }
     }
 }

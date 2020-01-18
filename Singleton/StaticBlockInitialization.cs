@@ -27,6 +27,7 @@ namespace Design_Pattern
             try
             {
                 instance = new StaticBlockInitialization();
+                Console.WriteLine("Instance Created with Static Block initialization!!!");
             }
             catch (Exception)
             {
@@ -45,9 +46,12 @@ namespace Design_Pattern
         /// Gets the instance.
         /// </summary>
         /// <returns>Instance of a Singleton class</returns>
-        public static StaticBlockInitialization GetInstance()
+        public static StaticBlockInitialization GetInstance
         {
-            return instance;
+            get
+            {
+                return instance;
+            }
         }
     }
 }

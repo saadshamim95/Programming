@@ -7,6 +7,8 @@
 
 namespace Design_Pattern
 {
+    using System;
+
     /// <summary>
     /// Class for Eager Initialization of instance
     /// </summary>
@@ -22,15 +24,19 @@ namespace Design_Pattern
         /// </summary>
         private EagerInitialization()
         {
+            Console.WriteLine("Object Created with Eager Initialization!!!");
         }
 
         /// <summary>
         /// Gets the instance.
         /// </summary>
         /// <returns>Instance of a Singleton class</returns>
-        public static EagerInitialization GetInstance()
+        public static EagerInitialization GetInstance
         {
-            return instance;
+            get
+            {
+                return instance;
+            }           
         }
     }
 }

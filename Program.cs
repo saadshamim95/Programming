@@ -8,6 +8,7 @@ namespace Design_Pattern
         {
             EagerInitialization eagerInitialization = EagerInitialization.GetInstance;
             StaticBlockInitialization staticBlockInitialization = StaticBlockInitialization.GetInstance;
+            LazyInitialization lazyInitialization = LazyInitialization.GetInstance;
         }
     }
 }

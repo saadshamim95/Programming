@@ -27,7 +27,6 @@ namespace Design_Pattern
             try
             {
                 instance = new StaticBlockInitialization();
-                Console.WriteLine("Instance Created with Static Block initialization!!!");
             }
             catch (Exception)
             {
@@ -40,6 +39,7 @@ namespace Design_Pattern
         /// </summary>
         private StaticBlockInitialization()
         {
+            Console.WriteLine("Instance created with Static Block Initialization!!!");
         }
 
         /// <summary>

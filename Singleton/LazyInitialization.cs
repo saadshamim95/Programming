@@ -5,6 +5,8 @@
 // <creator name="Saad Shamim"/>
 //-----------------------------------------------------------------------
 
+using System;
+
 namespace Design_Pattern
 {
     /// <summary>
@@ -21,21 +23,25 @@ namespace Design_Pattern
         /// Prevents a default instance of the <see cref="LazyInitialization"/> class from being created.
         /// </summary>
         private LazyInitialization()
-        { 
+        {
+            Console.WriteLine("Instance created with Lazy Initialization!!!");
         }
 
         /// <summary>
         /// Gets the instance.
         /// </summary>
         /// <returns>Instance of a Singleton class</returns>
-        public static LazyInitialization GetInstance()
+        public static LazyInitialization GetInstance
         {
-            if (instance == null) 
+            get
             {
-                instance = new LazyInitialization();
-            }
+                if (instance == null)
+                {
+                    instance = new LazyInitialization();
+                }
 
-            return instance;
+                return instance;
+            }           
         }
     }
 }

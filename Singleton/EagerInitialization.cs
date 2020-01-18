@@ -24,7 +24,7 @@ namespace Design_Pattern
         /// </summary>
         private EagerInitialization()
         {
-            Console.WriteLine("Object Created with Eager Initialization!!!");
+            Console.WriteLine("Instance created with Eager Initialization!!!");
         }
 
         /// <summary>

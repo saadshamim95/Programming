@@ -10,7 +10,7 @@ namespace Design_Pattern
     using System;
 
     /// <summary>
-    /// Class for Static Block Initialization
+    /// Class for Static Block Initialization of instance
     /// </summary>
     public class StaticBlockInitialization
     {

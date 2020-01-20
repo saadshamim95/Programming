@@ -20,9 +20,11 @@ namespace Design_Pattern
         /// <param name="args">The arguments.</param>
         public static void Main(string[] args)
         {
-            EagerInitializationSingleton eagerInitialization = EagerInitializationSingleton.GetInstance;
-            LazyInitializationSingleton lazyInitialization = LazyInitializationSingleton.GetInstance;
-            ThreadSafeSingleton threadSafe = ThreadSafeSingleton.GetInstance;
+            SingletonMain singletonMain = new SingletonMain();
+            singletonMain.CreateObject();
+
+            FactoryProgram factoryProgram = new FactoryProgram();
+            factoryProgram.Test();
         }
     }
 }

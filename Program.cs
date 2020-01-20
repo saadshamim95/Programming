@@ -20,10 +20,12 @@ namespace Design_Pattern
         /// <param name="args">The arguments.</param>
         public static void Main(string[] args)
         {
-            Console.WriteLine("1: Singleton DP");
-            Console.WriteLine("2: Factory DP");
+            Console.WriteLine("1: Singleton Design Pattern");
+            Console.WriteLine("2: Factory Design Pattern");
+            Console.WriteLine("3: Prototype Design Pattern");
             Console.Write("Enter you choice: ");
             int choice = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine();
             switch (choice)
             {
                 case 1:
@@ -33,6 +35,10 @@ namespace Design_Pattern
                 case 2:
                     FactoryProgram factoryProgram = new FactoryProgram();
                     factoryProgram.Test();
+                    break;
+                case 3:
+                    PrototypeMain prototypeMain = new PrototypeMain();
+                    prototypeMain.Test();
                     break;
                 default:
                     Console.WriteLine("Invalid Input!!!");

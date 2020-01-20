@@ -20,10 +20,10 @@ namespace Design_Pattern
             ComputerFactory factory = new Computer();
 
             IFactory pc = factory.GetDevice("PC");
-            pc.getDetails("2 GB", "1 TB", "2.2 GHz");
+            pc.GetDetails("2 GB", "1 TB", "2.2 GHz");
 
             IFactory server = factory.GetDevice("Server");
-            server.getDetails("4 GB", "5 TB", "4 GHz");
+            server.GetDetails("4 GB", "5 TB", "4 GHz");
         }
     }
 }

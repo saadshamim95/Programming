@@ -20,11 +20,24 @@ namespace Design_Pattern
         /// <param name="args">The arguments.</param>
         public static void Main(string[] args)
         {
-            SingletonMain singletonMain = new SingletonMain();
-            singletonMain.CreateObject();
-
-            FactoryProgram factoryProgram = new FactoryProgram();
-            factoryProgram.Test();
+            Console.WriteLine("1: Singleton DP");
+            Console.WriteLine("2: Factory DP");
+            Console.Write("Enter you choice: ");
+            int choice = Convert.ToInt32(Console.ReadLine());
+            switch (choice)
+            {
+                case 1:
+                    SingletonMain singletonMain = new SingletonMain();
+                    singletonMain.CreateObject();
+                    break;
+                case 2:
+                    FactoryProgram factoryProgram = new FactoryProgram();
+                    factoryProgram.Test();
+                    break;
+                default:
+                    Console.WriteLine("Invalid Input!!!");
+                    break;
+            }            
         }
     }
 }

@@ -23,6 +23,7 @@ namespace Design_Pattern
             Console.WriteLine("1: Singleton Design Pattern");
             Console.WriteLine("2: Factory Design Pattern");
             Console.WriteLine("3: Prototype Design Pattern");
+            Console.WriteLine("4: Adapter Design Pattern");
             Console.Write("Enter you choice: ");
             int choice = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine();
@@ -39,6 +40,10 @@ namespace Design_Pattern
                 case 3:
                     PrototypeMain prototypeMain = new PrototypeMain();
                     prototypeMain.Test();
+                    break;
+                case 4:
+                    AdapterMain adapterMain = new AdapterMain();
+                    adapterMain.Test();
                     break;
                 default:
                     Console.WriteLine("Invalid Input!!!");

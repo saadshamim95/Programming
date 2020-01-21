@@ -24,6 +24,7 @@ namespace Design_Pattern
             Console.WriteLine("2: Factory Design Pattern");
             Console.WriteLine("3: Prototype Design Pattern");
             Console.WriteLine("4: Adapter Design Pattern");
+            Console.WriteLine("5: Facade Design Pattern");
             Console.Write("Enter you choice: ");
             int choice = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine();
@@ -44,6 +45,10 @@ namespace Design_Pattern
                 case 4:
                     AdapterMain adapterMain = new AdapterMain();
                     adapterMain.Test();
+                    break;
+                case 5:
+                    FacadeMain facadeMain = new FacadeMain();
+                    facadeMain.Test();
                     break;
                 default:
                     Console.WriteLine("Invalid Input!!!");

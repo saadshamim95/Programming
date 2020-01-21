@@ -26,6 +26,7 @@ namespace Design_Pattern
             Console.WriteLine("4: Adapter Design Pattern");
             Console.WriteLine("5: Facade Design Pattern");
             Console.WriteLine("6: Proxy Design Pattern");
+            Console.WriteLine("7: Observer Design Pattern");
             Console.Write("Enter you choice: ");
             int choice = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine();
@@ -54,6 +55,10 @@ namespace Design_Pattern
                 case 6:
                     ProxyMain proxyMain = new ProxyMain();
                     proxyMain.Test();
+                    break;
+                case 7:
+                    ObserverMain observerMain = new ObserverMain();
+                    observerMain.Test();
                     break;
                 default:
                     Console.WriteLine("Invalid Input!!!");

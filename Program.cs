@@ -29,6 +29,8 @@ namespace Design_Pattern
             Console.WriteLine("7: Observer Design Pattern");
             Console.WriteLine("8: Visitor Design Pattern");
             Console.WriteLine("9: Mediator Design Pattern");
+            Console.WriteLine("10: Reflection");
+            Console.WriteLine("11: LateBinding using Reflection");
             Console.Write("Enter you choice: ");
             int choice = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine();
@@ -69,6 +71,14 @@ namespace Design_Pattern
                 case 9:
                     ChatClient chatClient = new ChatClient();
                     chatClient.Test();
+                    break;
+                case 10:
+                    ReflectionProgram reflectionProgram = new ReflectionProgram();
+                    reflectionProgram.Test();
+                    break;
+                case 11:
+                    Reflection.LateBinding lateBinding = new Reflection.LateBinding();
+                    lateBinding.Test();
                     break;
                 default:
                     Console.WriteLine("Invalid Input!!!");

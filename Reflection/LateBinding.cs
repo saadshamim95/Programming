@@ -1,10 +1,23 @@
-﻿using System;
-using System.Reflection;
+﻿//-----------------------------------------------------------------------
+// <copyright file="LateBinding.cs" company="BridgeLabz">
+//     Copyright © 2020 Company="BridgeLabz"
+// </copyright>
+// <creator name="Saad Shamim"/>
+//-----------------------------------------------------------------------
 
 namespace Design_Pattern.Reflection
 {
+    using System;
+    using System.Reflection;
+
+    /// <summary>
+    /// Class for Late Binding using Reflection
+    /// </summary>
     public class LateBinding
     {
+        /// <summary>
+        /// Tests this instance.
+        /// </summary>
         public void Test()
         {
             Assembly executingAssembly = Assembly.GetExecutingAssembly();
@@ -20,11 +33,20 @@ namespace Design_Pattern.Reflection
         }
     }
 
+    /// <summary>
+    /// Customer Class
+    /// </summary>
     public class Customer
     {
-        public string GetFullName(string FirstName, string LastName)
+        /// <summary>
+        /// Gets the full name.
+        /// </summary>
+        /// <param name="firstName">The first name.</param>
+        /// <param name="lastName">The last name.</param>
+        /// <returns>It returns string</returns>
+        public string GetFullName(string firstName, string lastName)
         {
-            return FirstName + " " + LastName;
+            return firstName + " " + lastName;
         }
     }
 }

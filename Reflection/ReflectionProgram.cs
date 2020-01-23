@@ -1,10 +1,23 @@
-﻿using System;
-using System.Reflection;
+﻿//-----------------------------------------------------------------------
+// <copyright file="ReflectionProgram.cs" company="BridgeLabz">
+//     Copyright © 2020 Company="BridgeLabz"
+// </copyright>
+// <creator name="Saad Shamim"/>
+//-----------------------------------------------------------------------
 
 namespace Design_Pattern
 {
+    using System;
+    using System.Reflection;
+
+    /// <summary>
+    /// Class for Reflection testing
+    /// </summary>
     public class ReflectionProgram
     {
+        /// <summary>
+        /// Tests this instance.
+        /// </summary>
         public void Test()
         {
             Type T = Type.GetType("Design_Pattern.Customer");
@@ -30,28 +43,58 @@ namespace Design_Pattern
         }
     }
 
+    /// <summary>
+    /// Customer Class
+    /// </summary>
     public class Customer
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
-
-        public Customer(int ID, string Name)
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Customer"/> class.
+        /// </summary>
+        /// <param name="id">The identifier.</param>
+        /// <param name="name">The name.</param>
+        public Customer(int id, string name)
         {
-            this.Id = ID;
-            this.Name = Name;
+            this.Id = id;
+            this.Name = name;
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Customer"/> class.
+        /// </summary>
         public Customer()
         {
             this.Id = -1;
             this.Name = string.Empty;
         }
 
+        /// <summary>
+        /// Gets or sets the identifier.
+        /// </summary>
+        /// <value>
+        /// The identifier.
+        /// </value>
+        public int Id { get; set; }
+
+        /// <summary>
+        /// Gets or sets the name.
+        /// </summary>
+        /// <value>
+        /// The name.
+        /// </value>
+        public string Name { get; set; }
+
+        /// <summary>
+        /// Prints the identifier.
+        /// </summary>
         public void PrintID()
         {
             Console.WriteLine("ID = {0}" + this.Id);
         }
 
+        /// <summary>
+        /// Prints the name.
+        /// </summary>
         public void PrintName()
         {
             Console.WriteLine("Name = {0}" + this.Name);

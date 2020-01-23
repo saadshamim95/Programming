@@ -32,6 +32,7 @@ namespace Design_Pattern
             Console.WriteLine("10: Reflection");
             Console.WriteLine("11: LateBinding using Reflection");
             Console.WriteLine("12: Dependency Injection");
+            Console.WriteLine("13: Exception Handling");
             Console.Write("Enter you choice: ");
             int choice = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine();
@@ -84,6 +85,10 @@ namespace Design_Pattern
                 case 12:
                     DependencyInjection dependencyInjection = new DependencyInjection();
                     dependencyInjection.Test();
+                    break;
+                case 13:
+                    ExceptionHandling exceptionHandling = new ExceptionHandling();
+                    exceptionHandling.Test();
                     break;
                 default:
                     Console.WriteLine("Invalid Input!!!");

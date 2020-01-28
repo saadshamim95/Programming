@@ -3,17 +3,22 @@
 <head>
     <meta charset="utf-8" />
     <title>Index</title>
+    <style>
+        ::-webkit-input-placeholder {
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <h1 style="text-align: center">Employee Management System</h1>
     <div style="display: flex; justify-content: center">
-        <form>
+        <form action="https://localhost:44397/SignUp.html" style="padding: 20px">
             <label for="username">Username&nbsp;</label>
             <input type="text" name="Username" id="username" placeholder="Username"><br /><br />
             <label for="password">Password &nbsp;</label>
-            <input type="password" name="Password" id="password" placeholder="********"><br /><br />
+            <input type="password" name="Password" id="password" placeholder="Password"><br /><br />
             <div style="display: flex; justify-content: center">
-                <button type="submit" value="Sumbit">Submit</button>
+                <button type="submit">Login</button>
             </div>
         </form> 
     </div>

@@ -7,7 +7,7 @@ namespace EmployeeManagementSystem.Manager
     {
         bool AddEmployee(Employee employee);
         bool UpdateEmployee(Employee employee);
-        bool DeleteEmployee(Employee employee);
+        bool DeleteEmployee(int id);
         List<Employee> GetAllEmployees();
     }
 }

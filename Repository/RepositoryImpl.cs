@@ -14,7 +14,7 @@ namespace EmployeeManagementSystem.Repository
             SqlConnection connection = new SqlConnection(connectionString);
             SqlCommand command = new SqlCommand("emAddEmployee", connection);
             command.CommandType = CommandType.StoredProcedure;
-            
+
             command.Parameters.AddWithValue("@FirstName", employee.FirstName);
             command.Parameters.AddWithValue("@LastName", employee.LastName);
             command.Parameters.AddWithValue("@Email", employee.Email);
@@ -34,12 +34,14 @@ namespace EmployeeManagementSystem.Repository
             }
         }
 
-        public bool Delete(Employee employee)
+        public bool Delete(int id)
         {
             SqlConnection connection = new SqlConnection(connectionString);
             SqlCommand command = new SqlCommand("emDeleteEmployee", connection);
             command.CommandType = CommandType.StoredProcedure;
 
+            Employee employee = new Employee();
+            employee.EmployeeID = id;
             command.Parameters.AddWithValue("@EmployeeID", employee.EmployeeID);
 
             connection.Open();

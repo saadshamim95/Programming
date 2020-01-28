@@ -4,7 +4,7 @@ using EmployeeManagementSystem.Repository;
 
 namespace EmployeeManagementSystem.Manager
 {
-    public class Manager : IManager
+    public class ManagerImpl : IManager
     {
         IRepository repository = new RepositoryImpl();
 
@@ -14,9 +14,9 @@ namespace EmployeeManagementSystem.Manager
             return result;
         }
 
-        public bool DeleteEmployee(Employee employee)
+        public bool DeleteEmployee(int id)
         {
-            var result = this.repository.Delete(employee);
+            var result = this.repository.Delete(id);
             return result;
         }
 

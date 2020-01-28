@@ -7,7 +7,7 @@ namespace EmployeeManagementSystem.Repository
     {
         bool Add(Employee employee);
         bool Update(Employee employee);
-        bool Delete(Employee employee);
+        bool Delete(int id);
         List<Employee> GetAllEmployees();
     }
 }

@@ -6,16 +6,15 @@ using EmployeeManagementSystem.Model;
 
 namespace EmployeeManagementSystem.Repository
 {
-    public class Repository : IRepository
+    public class RepositoryImpl : IRepository
     {
         readonly string connectionString = "Data Source=(localdb)\\MSSQLLocalDB; Initial Catalog=EmployeeManagement; Integrated Security=SSPI";
-        public bool Add(string FirstName, string LastName, string Email, string Mobile)
+        public bool Add(Employee employee)
         {
             SqlConnection connection = new SqlConnection(connectionString);
             SqlCommand command = new SqlCommand("emAddEmployee", connection);
             command.CommandType = CommandType.StoredProcedure;
-            Employee employee = new Employee();
-
+            
             command.Parameters.AddWithValue("@FirstName", employee.FirstName);
             command.Parameters.AddWithValue("@LastName", employee.LastName);
             command.Parameters.AddWithValue("@Email", employee.Email);

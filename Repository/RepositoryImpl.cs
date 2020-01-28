@@ -12,8 +12,10 @@ namespace EmployeeManagementSystem.Repository
         public bool Add(Employee employee)
         {
             SqlConnection connection = new SqlConnection(connectionString);
-            SqlCommand command = new SqlCommand("emAddEmployee", connection);
-            command.CommandType = CommandType.StoredProcedure;
+            SqlCommand command = new SqlCommand("emAddEmployee", connection)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
 
             command.Parameters.AddWithValue("@FirstName", employee.FirstName);
             command.Parameters.AddWithValue("@LastName", employee.LastName);
@@ -37,11 +39,15 @@ namespace EmployeeManagementSystem.Repository
         public bool Delete(int id)
         {
             SqlConnection connection = new SqlConnection(connectionString);
-            SqlCommand command = new SqlCommand("emDeleteEmployee", connection);
-            command.CommandType = CommandType.StoredProcedure;
+            SqlCommand command = new SqlCommand("emDeleteEmployee", connection)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
 
-            Employee employee = new Employee();
-            employee.EmployeeID = id;
+            Employee employee = new Employee
+            {
+                EmployeeID = id
+            };
             command.Parameters.AddWithValue("@EmployeeID", employee.EmployeeID);
 
             connection.Open();
@@ -62,18 +68,22 @@ namespace EmployeeManagementSystem.Repository
             List<Employee> employeeList = new List<Employee>();
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                SqlCommand command = new SqlCommand("emGetAllEmployee", connection);
-                command.CommandType = CommandType.StoredProcedure;
+                SqlCommand command = new SqlCommand("emGetAllEmployee", connection)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
                 connection.Open();
                 SqlDataReader reader = command.ExecuteReader();
                 while (reader.Read())
                 {
-                    Employee employee = new Employee();
-                    employee.EmployeeID = Convert.ToInt32(reader["EmployeeID"]);
-                    employee.FirstName = reader["FirstName"].ToString();
-                    employee.LastName = reader["LastName"].ToString();
-                    employee.Email = reader["Email"].ToString();
-                    employee.Mobile = reader["Mobile"].ToString();
+                    Employee employee = new Employee
+                    {
+                        EmployeeID = Convert.ToInt32(reader["EmployeeID"]),
+                        FirstName = reader["FirstName"].ToString(),
+                        LastName = reader["LastName"].ToString(),
+                        Email = reader["Email"].ToString(),
+                        Mobile = reader["Mobile"].ToString()
+                    };
 
                     employeeList.Add(employee);
                 }
@@ -86,8 +96,10 @@ namespace EmployeeManagementSystem.Repository
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                SqlCommand command = new SqlCommand("emUpdateEmployee", connection);
-                command.CommandType = CommandType.StoredProcedure;
+                SqlCommand command = new SqlCommand("emUpdateEmployee", connection)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
 
                 command.Parameters.AddWithValue("@EmployeeID", employee.EmployeeID);
                 command.Parameters.AddWithValue("@FirstName", employee.FirstName);

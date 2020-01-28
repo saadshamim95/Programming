@@ -5,10 +5,20 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace EmployeeManagementSystem
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class Startup
     {
+        /// <summary>
+        /// The configuration
+        /// </summary>
         private IConfiguration configuration;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Startup"/> class.
+        /// </summary>
+        /// <param name="config">The configuration.</param>
         public Startup(IConfiguration config)
         {
             this.configuration = config;

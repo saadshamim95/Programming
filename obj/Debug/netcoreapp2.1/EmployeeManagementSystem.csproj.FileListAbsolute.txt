@@ -1,0 +1,14 @@
+C:\Users\ye10398\source\repos\saadshamim95\Programming\EmployeeManagementSystem\bin\Debug\netcoreapp2.1\Properties\launchSettings.json
+C:\Users\ye10398\source\repos\saadshamim95\Programming\EmployeeManagementSystem\bin\Debug\netcoreapp2.1\EmployeeManagementSystem.deps.json
+C:\Users\ye10398\source\repos\saadshamim95\Programming\EmployeeManagementSystem\bin\Debug\netcoreapp2.1\EmployeeManagementSystem.runtimeconfig.json
+C:\Users\ye10398\source\repos\saadshamim95\Programming\EmployeeManagementSystem\bin\Debug\netcoreapp2.1\EmployeeManagementSystem.runtimeconfig.dev.json
+C:\Users\ye10398\source\repos\saadshamim95\Programming\EmployeeManagementSystem\bin\Debug\netcoreapp2.1\EmployeeManagementSystem.dll
+C:\Users\ye10398\source\repos\saadshamim95\Programming\EmployeeManagementSystem\obj\Debug\netcoreapp2.1\EmployeeManagementSystem.csprojAssemblyReference.cache
+C:\Users\ye10398\source\repos\saadshamim95\Programming\EmployeeManagementSystem\obj\Debug\netcoreapp2.1\EmployeeManagementSystem.RazorAssemblyInfo.cache
+C:\Users\ye10398\source\repos\saadshamim95\Programming\EmployeeManagementSystem\obj\Debug\netcoreapp2.1\EmployeeManagementSystem.RazorAssemblyInfo.cs
+C:\Users\ye10398\source\repos\saadshamim95\Programming\EmployeeManagementSystem\obj\Debug\netcoreapp2.1\EmployeeManagementSystem.AssemblyInfoInputs.cache
+C:\Users\ye10398\source\repos\saadshamim95\Programming\EmployeeManagementSystem\obj\Debug\netcoreapp2.1\EmployeeManagementSystem.AssemblyInfo.cs
+C:\Users\ye10398\source\repos\saadshamim95\Programming\EmployeeManagementSystem\obj\Debug\netcoreapp2.1\EmployeeManagementSystem.RazorTargetAssemblyInfo.cache
+C:\Users\ye10398\source\repos\saadshamim95\Programming\EmployeeManagementSystem\bin\Debug\netcoreapp2.1\EmployeeManagementSystem.pdb
+C:\Users\ye10398\source\repos\saadshamim95\Programming\EmployeeManagementSystem\obj\Debug\netcoreapp2.1\EmployeeManagementSystem.dll
+C:\Users\ye10398\source\repos\saadshamim95\Programming\EmployeeManagementSystem\obj\Debug\netcoreapp2.1\EmployeeManagementSystem.pdb

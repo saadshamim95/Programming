@@ -19,6 +19,8 @@ namespace EmployeeManagementSystem.Repository
 
             command.Parameters.AddWithValue("@FirstName", employee.FirstName);
             command.Parameters.AddWithValue("@LastName", employee.LastName);
+            command.Parameters.AddWithValue("@UserName", employee.UserName);
+            command.Parameters.AddWithValue("@Pass", employee.Pass);
             command.Parameters.AddWithValue("@Email", employee.Email);
             command.Parameters.AddWithValue("@Mobile", employee.Mobile);
 
@@ -81,6 +83,8 @@ namespace EmployeeManagementSystem.Repository
                         EmployeeID = Convert.ToInt32(reader["EmployeeID"]),
                         FirstName = reader["FirstName"].ToString(),
                         LastName = reader["LastName"].ToString(),
+                        UserName = reader["UserName"].ToString(),
+                        Pass = reader["Pass"].ToString(),
                         Email = reader["Email"].ToString(),
                         Mobile = reader["Mobile"].ToString()
                     };
@@ -104,6 +108,8 @@ namespace EmployeeManagementSystem.Repository
                 command.Parameters.AddWithValue("@EmployeeID", employee.EmployeeID);
                 command.Parameters.AddWithValue("@FirstName", employee.FirstName);
                 command.Parameters.AddWithValue("@LastName", employee.LastName);
+                command.Parameters.AddWithValue("@UserName", employee.UserName);
+                command.Parameters.AddWithValue("@Pass", employee.Pass);
                 command.Parameters.AddWithValue("@Email", employee.Email);
                 command.Parameters.AddWithValue("@Mobile", employee.Mobile);
 

@@ -4,6 +4,7 @@ namespace EmployeeManagementSystem.Model
 {
     public class Employee
     {
+        private int employeeID;
         private string firstName;
         private string lastName;
         private string userName;
@@ -11,6 +12,18 @@ namespace EmployeeManagementSystem.Model
         private string email;
         private string mobile;
 
+        [Required]
+        public int EmployeeID
+        {
+            get
+            {
+                return this.employeeID;
+            }
+            set
+            {
+                this.employeeID = value;
+            }
+        }
         [Required]
         public string FirstName 
         {

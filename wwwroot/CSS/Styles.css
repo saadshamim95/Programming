@@ -17,17 +17,19 @@ body {
 }
 
 .heading {
+    background: transparent;
     box-sizing: border-box;
     margin-top: 120px;
 }
 
 h1 {
-    color: white;
+    color: rgb(110, 13, 2);
     text-align: center;
     font-size: 72px;
     line-height: 72px;
     letter-spacing: 1px;
     padding: 30px 0px;
+    font-weight: bold;
 }
 
 .signup,

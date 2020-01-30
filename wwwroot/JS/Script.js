@@ -1,32 +1,23 @@
 ﻿$(document).ready(function () {
     $(".login-form").hide();
-    $(".login").css("background", "transparent");
 
     $(".login").click(function () {
         $(".signup-form").hide();
-        $(".login-form").show();
-        $(".signUp").css("background", "transapent");
-        $(".login").css("background", "tranparent");
+        $(".login-form").show();        
     });
 
     $(".signup").click(function () {
         $(".login-form").hide();
-        $(".signup-form").show();
-        $(".login").css("background", "transparent");
-        $(".signup").css("background", "transparent");
+        $(".signup-form").show();        
     });
 
     $(".notmember").click(function () {
         $(".login-form").hide();
-        $(".signup-form").show();
-        $(".login").css("background", "transparent");
-        $(".signup").css("background", "transparent");
+        $(".signup-form").show();        
     });
 
     $(".signupcomplete").click(function () {
         $(".signup-form").hide();
-        $(".login-form").show();
-        $(".signUp").css("background", "transapent");
-        $(".login").css("background", "tranparent");
+        $(".login-form").show();        
     });
 });

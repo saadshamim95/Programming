@@ -1,94 +1,130 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿//-----------------------------------------------------------------------
+// <copyright file="Employee.cs" company="BridgeLabz">
+//     Copyright © 2020 
+// </copyright>
+// <creator name="Saad Shamim"/>
+//-----------------------------------------------------------------------
 
 namespace EmployeeManagementSystem.Model
 {
+    using System.ComponentModel.DataAnnotations;
+
+    /// <summary>
+    /// Model Class Employee
+    /// </summary>
     public class Employee
     {
-        private int employeeID;
-        private string firstName;
-        private string lastName;
+        /// <summary>
+        /// The name
+        /// </summary>
+        private string name;
+
+        /// <summary>
+        /// The user name
+        /// </summary>
         private string userName;
+
+        /// <summary>
+        /// The pass
+        /// </summary>
         private string pass;
+
+        /// <summary>
+        /// The email
+        /// </summary>
         private string email;
+
+        /// <summary>
+        /// The mobile
+        /// </summary>
         private string mobile;
 
+        /// <summary>
+        /// Gets or sets the name.
+        /// </summary>
+        /// <value>
+        /// The name.
+        /// </value>
         [Required]
-        public int EmployeeID
+        public string Name 
         {
             get
             {
-                return this.employeeID;
+                return this.name;
             }
+
             set
             {
-                this.employeeID = value;
-            }
-        }
-        [Required]
-        public string FirstName 
-        {
-            get
-            {
-                return this.firstName;
-            }
-            set
-            {
-                this.firstName = value;
+                this.name = value;
             }
         }
 
+        /// <summary>
+        /// Gets or sets the name of the user.
+        /// </summary>
+        /// <value>
+        /// The name of the user.
+        /// </value>
         [Required]
-        public string LastName 
-        {
-            get
-            {
-                return this.lastName;
-            }
-            set
-            {
-                this.lastName = value;
-            }
-        }
-
-		[Required]
-		public string UserName 
+        public string UserName
         {
             get
             {
                 return this.userName;
             }
+
             set
             {
                 this.userName = value;
             }
         }
 
-		[Required]
-		public string Pass 
+        /// <summary>
+        /// Gets or sets the pass.
+        /// </summary>
+        /// <value>
+        /// The pass.
+        /// </value>
+        [Required]
+        public string Pass
         {
             get
             {
                 return this.pass;
             }
+
             set
             {
                 this.pass = value;
             }
         }
 
-        [Required]
+        /// <summary>
+        /// Gets or sets the email.
+        /// </summary>
+        /// <value>
+        /// The email.
+        /// </value>
+        [Key]
         public string Email 
         {
             get
             {
                 return this.email;
             }
+
             set
             {
                 this.email = value;
             }
         }
 
+        /// <summary>
+        /// Gets or sets the mobile.
+        /// </summary>
+        /// <value>
+        /// The mobile.
+        /// </value>
         [Required]
         public string Mobile 
         {
@@ -96,6 +132,7 @@ namespace EmployeeManagementSystem.Model
             {
                 return this.mobile;
             }
+
             set
             {
                 this.mobile = value;

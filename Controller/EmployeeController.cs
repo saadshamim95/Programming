@@ -1,26 +1,53 @@
-﻿using EmployeeManagementSystem.Manager;
-using EmployeeManagementSystem.Model;
-using Microsoft.AspNetCore.Mvc;
+﻿//-----------------------------------------------------------------------
+// <copyright file="EmployeeController.cs" company="BridgeLabz">
+//     Copyright © 2020 
+// </copyright>
+// <creator name="Saad Shamim"/>
+//-----------------------------------------------------------------------
 
 namespace EmployeeManagementSystem.Controller
 {
-    //[Route("api/[controller]")]
-    //[ApiController]    
+    using System;
+    using EmployeeManagementSystem.Manager;
+    using EmployeeManagementSystem.Model;
+    using Microsoft.AspNetCore.Mvc;
+
     /// <summary>
     /// Employee Controller Class
     /// </summary>
     /// <seealso cref="Microsoft.AspNetCore.Mvc.ControllerBase" />
+    [Route("api/[controller]")]
+    [ApiController]
     public class EmployeeController : ControllerBase
     {
-        IManager manager = new ManagerImpl();
+        /// <summary>
+        /// The manager
+        /// </summary>
+        private IManager manager;
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EmployeeController"/> class.
+        /// </summary>
+        public EmployeeController()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EmployeeController"/> class.
+        /// </summary>
+        /// <param name="manager">The manager.</param>
+        public EmployeeController(IManager manager)
+        {
+            this.manager = manager;
+        }
 
         /// <summary>
         /// Adds the employee.
         /// </summary>
         /// <param name="employee">The employee.</param>
-        /// <returns></returns>
+        /// <returns>It returns Action result</returns>
         [HttpPost]
-        [Route("api/Add")]
+        [Route("Add")]
         public IActionResult AddEmployee([FromBody] Employee employee)
         {          
             var result = this.manager.AddEmployee(employee);
@@ -38,9 +65,9 @@ namespace EmployeeManagementSystem.Controller
         /// Updates the employee.
         /// </summary>
         /// <param name="employee">The employee.</param>
-        /// <returns></returns>
+        /// <returns>It returns Action result</returns>
         [HttpPut]
-        [Route("api/Update")]
+        [Route("Update")]
         public IActionResult UpdateEmployee([FromBody] Employee employee)
         {
             var result = this.manager.UpdateEmployee(employee);
@@ -57,13 +84,13 @@ namespace EmployeeManagementSystem.Controller
         /// <summary>
         /// Deletes the employee.
         /// </summary>
-        /// <param name="id">The identifier.</param>
-        /// <returns></returns>
+        /// <param name="email">The email.</param>
+        /// <returns>It returns Action result</returns>
         [HttpDelete]
-        [Route("api/Delete")]
-        public IActionResult DeleteEmployee(int id)
+        [Route("Delete")]
+        public IActionResult DeleteEmployee(string email)
         {
-            var result = this.manager.DeleteEmployee(id);
+            var result = this.manager.DeleteEmployee(email);
             if (result)
             {
                 return this.Ok(result);
@@ -71,6 +98,25 @@ namespace EmployeeManagementSystem.Controller
             else
             {
                 return this.BadRequest("Error Occurred while deleting!!!");
+            }
+        }
+
+        /// <summary>
+        /// Gets all employees.
+        /// </summary>
+        /// <returns>It returns Action result</returns>
+        [HttpGet]
+        [Route("Show")]
+        public IActionResult GetAllEmployees()
+        {
+            try
+            {
+                var result = this.manager.GetAllEmployees();
+                return this.Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return this.BadRequest(ex.Message);
             }
         }
     }

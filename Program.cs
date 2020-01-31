@@ -1,10 +1,17 @@
-﻿using Microsoft.AspNetCore;
-using Microsoft.AspNetCore.Hosting;
+﻿//-----------------------------------------------------------------------
+// <copyright file="Program.cs" company="BridgeLabz">
+//     Copyright © 2020 
+// </copyright>
+// <creator name="Saad Shamim"/>
+//-----------------------------------------------------------------------
 
 namespace EmployeeManagementSystem
 {
+    using Microsoft.AspNetCore;
+    using Microsoft.AspNetCore.Hosting;
+
     /// <summary>
-    /// 
+    /// Program Class
     /// </summary>
     public class Program
     {
@@ -21,7 +28,7 @@ namespace EmployeeManagementSystem
         /// Creates the web host builder.
         /// </summary>
         /// <param name="args">The arguments.</param>
-        /// <returns></returns>
+        /// <returns>It returns IWebHostBuilder</returns>
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>();

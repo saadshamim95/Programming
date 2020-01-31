@@ -1,7 +1,6 @@
 Create Procedure emAddEmployee
 (
-	@FirstName varchar(20),
-	@LastName varchar(20),
+	@Name varchar(50),
 	@UserName varchar(20),
 	@Pass varchar(20),
 	@Email varchar(30),
@@ -9,6 +8,6 @@ Create Procedure emAddEmployee
 )
 as
 Begin
-	Insert Into Employee (FirstName, LastName, UserName, Pass, Email, Mobile)
-	Values (@FirstName, @LastName, @UserName, @Pass, @Email, @Mobile)
+	Insert Into Employee (Name, UserName, Pass, Email, Mobile)
+	Values (@Name, @UserName, @Pass, @Email, @Mobile)
 End

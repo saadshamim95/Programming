@@ -1,8 +1,8 @@
 Create Procedure emDeleteEmployee
 (
-	@EmployeeId int
+	@Email varchar(30)
 )
 as
 Begin
-	Delete From Employee Where EmployeeId=@EmployeeId
+	Delete From Employee Where Email=@Email
 End

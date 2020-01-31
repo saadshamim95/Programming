@@ -3,5 +3,5 @@ as
 Begin
 	Select *
 	from Employee
-	Order By EmployeeId
+	Order By Name
 End

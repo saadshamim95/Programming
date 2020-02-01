@@ -6,7 +6,7 @@
 body {
     background-image: url(Background.jpg);
     background-attachment: fixed;
-    background-size: 100%;
+    background-size: cover;
     background-position: center;
     font-family: 'Times New Roman';
 }

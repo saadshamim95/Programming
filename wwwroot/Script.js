@@ -35,6 +35,25 @@
         return false;
     }
 
+    console.log($('#Name').val());
+
+    $.ajax({
+        url: '/Add',
+        type: 'POST',
+        contentType: 'application/json;charset=utf-8',
+        dataType: 'json',
+        data: "{'Name': '" + $('#Name').val() + "','UserName': '" + $('#SignUpUserName').val() + "','Pass': '" + $('#SignUpPass').val() + "','Email': '" + $('#Email').val() + "','Mobile': '" + $('#Mobile').val() + "'}",
+        success: function () {
+            alert("Data Inserted successfully!!!");
+        },
+        error: function () {
+            alert("Insert Error!!!");
+        }
+    });
+
+    $(".signup-form").hide();
+    $(".login-form").show();
+    event.preventDefault();
     return true;
 }
 
@@ -51,9 +70,11 @@ function validateLogin() {
 $(document).ready(function () {
     $(".login-form").hide();
 
+
     $(".login").click(function () {
         $(".signup-form").hide();
-        $(".login-form").show();        
+        $(".login-form").show();
+        $("#errorSignUp").hide();
     });
 
     $(".signup").click(function () {
@@ -64,11 +85,6 @@ $(document).ready(function () {
     $(".notmember").click(function () {
         $(".login-form").hide();
         $(".signup-form").show();        
-    });
-
-    $(".signupcomplete").click(function () {
-        $(".signup-form").hide();
-        $(".login-form").show();        
     });
 
 });

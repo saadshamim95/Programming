@@ -65,7 +65,7 @@ namespace EmployeeManagementSystem
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Employee}/{action=UpdateEmployee}/{id?}");
+                    template: "{controller=Employee}/{action=AddEmployee}/{id?}");
             });
         }
     }

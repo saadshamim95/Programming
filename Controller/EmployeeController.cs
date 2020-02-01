@@ -16,8 +16,8 @@ namespace EmployeeManagementSystem.Controller
     /// Employee Controller Class
     /// </summary>
     /// <seealso cref="Microsoft.AspNetCore.Mvc.ControllerBase" />
-    [Route("api/[controller]")]
-    [ApiController]
+    //[Route("api/[controller]")]
+    //[ApiController]
     public class EmployeeController : ControllerBase
     {
         /// <summary>
@@ -48,7 +48,7 @@ namespace EmployeeManagementSystem.Controller
         /// <returns>It returns Action result</returns>
         [HttpPost]
         [Route("Add")]
-        public IActionResult AddEmployee([FromBody] Employee employee)
+        public IActionResult AddEmployee(Employee employee)
         {          
             var result = this.manager.AddEmployee(employee);
             if (result)

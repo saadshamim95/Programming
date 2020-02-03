@@ -47,6 +47,6 @@ namespace EmployeeManagementSystem.Manager
         /// </summary>
         /// <param name="employee">The employee.</param>
         /// <returns>It returns true if Login successful else false</returns>
-        bool Login(Employee employee);
+        bool EmployeeLogin(Employee employee);
     }
 }

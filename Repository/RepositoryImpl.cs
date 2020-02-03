@@ -172,7 +172,7 @@ namespace EmployeeManagementSystem.Repository
             }
         }
 
-        public bool Login(Employee employee)
+        public bool EmployeeLogin(Employee employee)
         {
             using (SqlConnection connection = new SqlConnection(this.connectionString))
             {
@@ -187,7 +187,7 @@ namespace EmployeeManagementSystem.Repository
                 connection.Open();
                 int result = command.ExecuteNonQuery();
                 connection.Close();
-                if (result == 1)
+                if (result >= 1)
                 {
                     return true;
                 }

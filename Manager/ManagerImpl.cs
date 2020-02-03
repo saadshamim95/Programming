@@ -89,9 +89,9 @@ namespace EmployeeManagementSystem.Manager
         /// <returns>
         /// It returns true if Login successful else false
         /// </returns>
-        public bool Login(Employee employee)
+        public bool EmployeeLogin(Employee employee)
         {
-            var result = this.repository.Login(employee);
+            var result = this.repository.EmployeeLogin(employee);
             return result;
         }
     }

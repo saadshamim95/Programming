@@ -56,20 +56,20 @@
 }
 
 function validateLogin() {
-    if (document.getElementById("LoginUserName").value.length < 4 || document.getElementById("LoginPass").value.length < 4) {
-        document.getElementById("errorLogin").innerHTML = "Username or Password is incorrect";
+    if (document.getElementById("LoginEmail").value.length < 4 || document.getElementById("LoginPass").value.length < 4) {
+        document.getElementById("errorLogin").innerHTML = "Email or Password is incorrect";
         document.LoginForm.LoginPass.focus();
         return false;
     }
 
     $.ajax({
-        url: 'api/Employee/Login',
-        type: 'GET',
+        url: 'api/Employee/Add',
+        type: 'POST',
         contentType: 'application/json;charset=utf-8',
         dataType: 'json',
-        data: "{'Email': '" + $('#LoginUserName').val() + "','Pass': '" + $('#LoginPass').val() + "'}",
+        data: "{'Email': '" + $('#LoginEmail').val() + "','Pass': '" + $('#LoginPass').val() + "'}",
         success: function () {
-            alert("Login successful!!!");
+            alert("Login Successful!!!");
         },
         error: function () {
             alert("Login Error!!!");
@@ -79,8 +79,6 @@ function validateLogin() {
     $(".signup-form").hide();
     $(".login-form").show();
     event.preventDefault();
-    return true;
-
     return true;
 }
 
@@ -96,12 +94,23 @@ $(document).ready(function () {
 
     $(".signup").click(function () {
         $(".login-form").hide();
-        $(".signup-form").show();        
+        $(".signup-form").show();
+        $("errorSignUp").show();
+        $(".login").reset();
     });
 
     $(".notmember").click(function () {
         $(".login-form").hide();
-        $(".signup-form").show();        
+        $(".signup-form").show();
+        
+    });
+
+    $("#signup-button").click(function () {
+        validateSignUp();
+    });
+
+    $("#login-button").click(function () {
+        validateLogin();
     });
 
 });

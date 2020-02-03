@@ -60,12 +60,13 @@ namespace EmployeeManagementSystem
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseDefaultFiles();
             app.UseStaticFiles();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Employee}/{action=AddEmployee}/{id?}");
+                    template: "{controller=Employee}/{action=EmployeeLogin}/{id?}");
             });
         }
     }

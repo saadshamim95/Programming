@@ -10,7 +10,6 @@ namespace EmployeeManagementSystem.Controller
     using System;
     using EmployeeManagementSystem.Manager;
     using EmployeeManagementSystem.Model;
-    using EmployeeManagementSystem.Repository;
     using Microsoft.AspNetCore.Mvc;
 
     /// <summary>
@@ -41,7 +40,7 @@ namespace EmployeeManagementSystem.Controller
         /// <param name="employee">The employee.</param>
         /// <returns>It returns Action result</returns>
         [HttpPost]
-        [Route("Add")]
+        [Route("Log")]
         public IActionResult AddEmployee([FromBody] Employee employee)
         {          
             var result = this.manager.AddEmployee(employee);
@@ -119,11 +118,11 @@ namespace EmployeeManagementSystem.Controller
         /// </summary>
         /// <param name="employee">The employee.</param>
         /// <returns>It returns Action result</returns>
-        [HttpGet]
-        [Route("Login")]
-        public IActionResult Login([FromBody] Employee employee)
+        [HttpPost]
+        [Route("Add")]
+        public IActionResult EmployeeLogin([FromBody] Employee employee)
         {
-            var result = this.manager.Login(employee);
+            var result = this.manager.EmployeeLogin(employee);
             if (result)
             {
                 return this.Ok(employee);

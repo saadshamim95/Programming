@@ -61,7 +61,7 @@ namespace EmployeeManagementSystem.Repository
 
             int result = command.ExecuteNonQuery();
             connection.Close();
-            if (result >= 1)
+            if (result == 1)
             {
                 return true;
             }
@@ -93,7 +93,7 @@ namespace EmployeeManagementSystem.Repository
             connection.Open();
             int result = command.ExecuteNonQuery();
             connection.Close();
-            if (result >= 1)
+            if (result == 1)
             {
                 return true;
             }
@@ -161,7 +161,33 @@ namespace EmployeeManagementSystem.Repository
                 connection.Open();
                 int result = command.ExecuteNonQuery();
                 connection.Close();
-                if (result >= 1)
+                if (result == 1)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
+
+        public bool Login(Employee employee)
+        {
+            using (SqlConnection connection = new SqlConnection(this.connectionString))
+            {
+                SqlCommand command = new SqlCommand("emLoginEmployee", connection)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+
+                command.Parameters.AddWithValue("@Email", employee.Email);
+                command.Parameters.AddWithValue("@Pass", employee.Pass);
+                
+                connection.Open();
+                int result = command.ExecuteNonQuery();
+                connection.Close();
+                if (result == 1)
                 {
                     return true;
                 }

@@ -60,7 +60,7 @@
                     </div>
                     <div class="input-group">
                         <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-                        <input type="text" class="form-control" name="password" id="LoginPass" placeholder="Password" />
+                        <input type="password" class="form-control" name="password" id="LoginPass" placeholder="Password" />
                     </div>
 
                     <div class="row">
@@ -85,102 +85,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <!-- <script src="Script.js" type="text/javascript"></script> -->
+    <script src="Script.js" type="text/javascript"></script>
     <script type="text/javascript" src="jquery-3.4.1.js"></script>
-    <script>
-    function validateSignUp() {
-    if (document.getElementById("Name").value.length < 3) {
-        document.getElementById("errorSignUp").innerHTML = "Name should be atleast 3 letter";
-        document.SignUpForm.Name.focus();
-        return false;
-    }
-
-    if (document.getElementById("SignUpUserName").value.length < 4) {
-        document.getElementById("errorSignUp").innerHTML = "Username should be atleast 4 letter";
-        document.SignUpForm.SignUpUserName.focus();
-        return false;
-    }
-
-    if (document.getElementById("SignUpPass").value.length < 4) {
-        document.getElementById("errorSignUp").innerHTML = "Password should be atleast 4 letter";
-        document.SignUpForm.SignUpPass.focus();
-        return false;
-    }
-
-    if (document.getElementById("SignUpPass").value != document.getElementById("RetypePass").value) {
-        document.getElementById("errorSignUp").innerHTML = "Password doesn't match!!!";
-        document.SignUpForm.RetypePass.focus();
-        return false;
-    }
-
-    if (document.getElementById("Email").value.length < 4) {
-        document.getElementById("errorSignUp").innerHTML = "Type correct Email ID";
-        document.SignUpForm.Email.focus();
-        return false;
-    }
-
-    if (document.getElementById("Mobile").value.length != 10) {
-        document.getElementById("errorSignUp").innerHTML = "Incorrect Mobile Number";
-        document.SignUpForm.Mobile.focus();
-        return false;
-    }
-
-        console.log($('#Name').val());
-        console.log($('#SignUpUserName').val());
-        console.log($('#SignUpPass').val());
-        console.log($('#Email').val());
-        console.log($('#Mobile').val());
-
-     $.ajax({
-        url: 'api/Employee/Add',
-        type: 'POST',
-        contentType: 'application/json;charset=utf-8',
-        dataType: 'json',
-        data: "{'Name': '" + $('#Name').val() + "','UserName': '" + $('#SignUpUserName').val() + "','Pass': '" + $('#SignUpPass').val() + "','Email': '" + $('#Email').val() + "','Mobile': '" + $('#Mobile').val() + "'}",
-        success: function () {
-            alert("Data Inserted successfully!!!");
-        },
-        error: function () {
-            alert("Insert Error!!!");
-        }
-    });
-
-    $(".signup-form").hide();
-    $(".login-form").show();
-    event.preventDefault();
-    return true;
-    }
-
-    function validateLogin() {
-        if (document.getElementById("LoginUserName").value.length < 4 || document.getElementById("LoginPass").value.length < 4) {
-                document.getElementById("errorLogin").innerHTML = "Username or Password is incorrect";
-                document.LoginForm.LoginPass.focus();
-                return false;
-        }
-
-        return true;
-    }
-
-    $(document).ready(function () {
-        $(".login-form").hide();
-
-        $(".login").click(function () {
-            $(".signup-form").hide();
-            $(".login-form").show();
-            $("#errorSignUp").hide();
-        });
-
-        $(".signup").click(function () {
-            $(".login-form").hide();
-            $(".signup-form").show();
-        });
-
-        $(".notmember").click(function () {
-            $(".login-form").hide();
-            $(".signup-form").show();
-        });
-
-    });
-    </script>
 </body>
 </html>

@@ -35,10 +35,8 @@
         return false;
     }
 
-    console.log($('#Name').val());
-
     $.ajax({
-        url: '/Add',
+        url: 'api/Employee/Add',
         type: 'POST',
         contentType: 'application/json;charset=utf-8',
         dataType: 'json',
@@ -63,6 +61,25 @@ function validateLogin() {
         document.LoginForm.LoginPass.focus();
         return false;
     }
+
+    $.ajax({
+        url: 'api/Employee/Login',
+        type: 'GET',
+        contentType: 'application/json;charset=utf-8',
+        dataType: 'json',
+        data: "{'Email': '" + $('#LoginUserName').val() + "','Pass': '" + $('#LoginPass').val() + "'}",
+        success: function () {
+            alert("Login successful!!!");
+        },
+        error: function () {
+            alert("Login Error!!!");
+        }
+    });
+
+    $(".signup-form").hide();
+    $(".login-form").show();
+    event.preventDefault();
+    return true;
 
     return true;
 }

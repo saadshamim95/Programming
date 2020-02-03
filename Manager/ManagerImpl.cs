@@ -81,5 +81,18 @@ namespace EmployeeManagementSystem.Manager
             var result = this.repository.Update(employee);
             return result;
         }
+
+        /// <summary>
+        /// Logins the specified employee.
+        /// </summary>
+        /// <param name="employee">The employee.</param>
+        /// <returns>
+        /// It returns true if Login successful else false
+        /// </returns>
+        public bool Login(Employee employee)
+        {
+            var result = this.repository.Login(employee);
+            return result;
+        }
     }
 }

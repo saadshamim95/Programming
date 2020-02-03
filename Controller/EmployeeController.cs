@@ -10,27 +10,21 @@ namespace EmployeeManagementSystem.Controller
     using System;
     using EmployeeManagementSystem.Manager;
     using EmployeeManagementSystem.Model;
+    using EmployeeManagementSystem.Repository;
     using Microsoft.AspNetCore.Mvc;
 
     /// <summary>
     /// Employee Controller Class
     /// </summary>
     /// <seealso cref="Microsoft.AspNetCore.Mvc.ControllerBase" />
-    //[Route("api/[controller]")]
-    //[ApiController]
+    [Route("api/[controller]")]
+    [ApiController]
     public class EmployeeController : ControllerBase
     {
         /// <summary>
         /// The manager
         /// </summary>
-        private IManager manager;
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EmployeeController"/> class.
-        /// </summary>
-        public EmployeeController()
-        {
-        }
+        private readonly IManager manager;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="EmployeeController"/> class.
@@ -48,7 +42,7 @@ namespace EmployeeManagementSystem.Controller
         /// <returns>It returns Action result</returns>
         [HttpPost]
         [Route("Add")]
-        public IActionResult AddEmployee(Employee employee)
+        public IActionResult AddEmployee([FromBody] Employee employee)
         {          
             var result = this.manager.AddEmployee(employee);
             if (result)
@@ -117,6 +111,26 @@ namespace EmployeeManagementSystem.Controller
             catch (Exception ex)
             {
                 return this.BadRequest(ex.Message);
+            }
+        }
+
+        /// <summary>
+        /// Logins the specified employee.
+        /// </summary>
+        /// <param name="employee">The employee.</param>
+        /// <returns>It returns Action result</returns>
+        [HttpGet]
+        [Route("Login")]
+        public IActionResult Login([FromBody] Employee employee)
+        {
+            var result = this.manager.Login(employee);
+            if (result)
+            {
+                return this.Ok(employee);
+            }
+            else
+            {
+                return this.BadRequest("Login Error!!!");
             }
         }
     }

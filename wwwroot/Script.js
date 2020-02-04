@@ -83,18 +83,18 @@ function validateLogin() {
 $(document).ready(function () {
     $(".login-form").hide();
 
-
-    $(".login").click(function () {
-        $("#errorSignUp").innerHTML = "";
-        $("#errorSignUp").hide();
-        $(".signup-form").hide();
-        $(".login-form").show();       
-    });
-
     $(".signup").click(function () {
+        document.getElementById("errorLogin").innerHTML = "";
+        //$("#errorLogin").hide();
         $(".login-form").hide();
         $(".signup-form").show();
-        $("#errorSignUp").show();
+    });
+
+    $(".login").click(function () {
+        document.getElementById("errorSignUp").innerHTML = "";
+        //$("#errorSignUp").hide();
+        $(".signup-form").hide();
+        $(".login-form").show();
     });
 
     $(".notmember").click(function () {
@@ -103,12 +103,12 @@ $(document).ready(function () {
         
     });
 
-    $("#signup-button").click(function () {
+    /*$("#signup-button").click(function () {
         validateSignUp();
     });
 
     $("#login-button").click(function () {
         validateLogin();
-    });
+    });*/
 
 });

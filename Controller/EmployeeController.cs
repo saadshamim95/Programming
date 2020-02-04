@@ -132,5 +132,25 @@ namespace EmployeeManagementSystem.Controller
                 return this.BadRequest("Login Error!!!");
             }
         }
+
+        /// <summary>
+        /// Forgets the password.
+        /// </summary>
+        /// <param name="employee">The employee.</param>
+        /// <returns>It returns Action result</returns>
+        [HttpPut]
+        [Route("Forget")]
+        public IActionResult ForgetPassword([FromBody] Employee employee)
+        {
+            var result = this.manager.ForgetPassword(employee);
+            if (result)
+            {
+                return this.Ok(employee);
+            }
+            else
+            {
+                return this.BadRequest("Error Changing Password!!!");
+            }
+        }
     }
 }

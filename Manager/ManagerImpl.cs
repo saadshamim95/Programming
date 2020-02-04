@@ -94,5 +94,11 @@ namespace EmployeeManagementSystem.Manager
             var result = this.repository.EmployeeLogin(employee);
             return result;
         }
+
+        public bool ForgetPassword(Employee employee)
+        {
+            var result = this.repository.ForgetPassword(employee);
+            return result;
+        }
     }
 }

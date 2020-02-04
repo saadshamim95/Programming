@@ -200,5 +200,34 @@ namespace EmployeeManagementSystem.Repository
                 }
             }
         }
+
+        public bool ForgetPassword(Employee employee)
+        {
+            using (SqlConnection connection = new SqlConnection(this.connectionString))
+            {
+                SqlCommand command = new SqlCommand("emForgetPassword", connection);
+                command.CommandType = CommandType.StoredProcedure;
+
+                command.Parameters.AddWithValue("@Email", employee.Email);
+                command.Parameters.AddWithValue("@Pass", employee.Pass);
+
+                connection.Open();
+                /*DataTable dataTable = new DataTable();
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(command);
+                sqlDataAdapter.Fill(dataTable);
+                int result = dataTable.Rows.Count;
+                */
+                int result = command.ExecuteNonQuery();
+                connection.Close();
+                if (result == 1)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
     }
 }

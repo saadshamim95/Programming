@@ -12622,19 +12622,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Saad Shamim\\.nuget\\packages\\": {}
+    "C:\\Users\\ye10398\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Saad Shamim\\Source\\Repos\\Programming\\Employee Management System\\EmployeeManagementSystem.csproj",
+      "projectUniqueName": "C:\\Users\\ye10398\\source\\repos\\saadshamim95\\Programming\\EmployeeManagementSystem\\EmployeeManagementSystem.csproj",
       "projectName": "EmployeeManagementSystem",
-      "projectPath": "C:\\Users\\Saad Shamim\\Source\\Repos\\Programming\\Employee Management System\\EmployeeManagementSystem.csproj",
-      "packagesPath": "C:\\Users\\Saad Shamim\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Saad Shamim\\Source\\Repos\\Programming\\Employee Management System\\obj\\",
+      "projectPath": "C:\\Users\\ye10398\\source\\repos\\saadshamim95\\Programming\\EmployeeManagementSystem\\EmployeeManagementSystem.csproj",
+      "packagesPath": "C:\\Users\\ye10398\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ye10398\\source\\repos\\saadshamim95\\Programming\\EmployeeManagementSystem\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Saad Shamim\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ye10398\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

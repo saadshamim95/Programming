@@ -40,7 +40,7 @@ namespace EmployeeManagementSystem.Controller
         /// <param name="employee">The employee.</param>
         /// <returns>It returns Action result</returns>
         [HttpPost]
-        [Route("Log")]
+        [Route("Add")]
         public IActionResult AddEmployee([FromBody] Employee employee)
         {          
             var result = this.manager.AddEmployee(employee);
@@ -119,7 +119,7 @@ namespace EmployeeManagementSystem.Controller
         /// <param name="employee">The employee.</param>
         /// <returns>It returns Action result</returns>
         [HttpPost]
-        [Route("Add")]
+        [Route("Login")]
         public IActionResult EmployeeLogin([FromBody] Employee employee)
         {
             var result = this.manager.EmployeeLogin(employee);

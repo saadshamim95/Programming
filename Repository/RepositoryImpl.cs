@@ -185,9 +185,12 @@ namespace EmployeeManagementSystem.Repository
                 command.Parameters.AddWithValue("@Pass", employee.Pass);
                 
                 connection.Open();
-                int result = command.ExecuteNonQuery();
+                DataTable dataTable = new DataTable();
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(command);
+                sqlDataAdapter.Fill(dataTable);
+                int result = dataTable.Rows.Count;
                 connection.Close();
-                if (result >= 1)
+                if (result == 1)
                 {
                     return true;
                 }

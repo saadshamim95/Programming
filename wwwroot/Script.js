@@ -42,7 +42,7 @@
         dataType: 'json',
         data: "{'Name': '" + $('#Name').val() + "','UserName': '" + $('#SignUpUserName').val() + "','Pass': '" + $('#SignUpPass').val() + "','Email': '" + $('#Email').val() + "','Mobile': '" + $('#Mobile').val() + "'}",
         success: function () {
-            alert("Data Inserted successfully!!!");
+            alert("SignUp successfull!!!");
         },
         error: function () {
             alert("Insert Error!!!");
@@ -63,21 +63,19 @@ function validateLogin() {
     }
 
     $.ajax({
-        url: 'api/Employee/Add',
+        url: 'api/Employee/Login',
         type: 'POST',
         contentType: 'application/json;charset=utf-8',
         dataType: 'json',
-        data: "{'Email': '" + $('#LoginEmail').val() + "','Pass': '" + $('#LoginPass').val() + "'}",
+        data: "{'Email': '" + $('#LoginEmail').val() + "','Pass': '" + $('#LoginPass').val() + "'}",  
         success: function () {
-            alert("Login Successful!!!");
+            window.location = 'https://localhost:44397/SignInComplete.html';
         },
         error: function () {
             alert("Login Error!!!");
         }
     });
 
-    $(".signup-form").hide();
-    $(".login-form").show();
     event.preventDefault();
     return true;
 }
@@ -87,16 +85,16 @@ $(document).ready(function () {
 
 
     $(".login").click(function () {
-        $(".signup-form").hide();
-        $(".login-form").show();
+        $("#errorSignUp").innerHTML = "";
         $("#errorSignUp").hide();
+        $(".signup-form").hide();
+        $(".login-form").show();       
     });
 
     $(".signup").click(function () {
         $(".login-form").hide();
         $(".signup-form").show();
-        $("errorSignUp").show();
-        $(".login").reset();
+        $("#errorSignUp").show();
     });
 
     $(".notmember").click(function () {

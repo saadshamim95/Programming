@@ -45,7 +45,6 @@ namespace EmployeeManagementSystem.Model
         /// <value>
         /// The name.
         /// </value>
-        [Required]
         public string Name 
         {
             get
@@ -65,7 +64,6 @@ namespace EmployeeManagementSystem.Model
         /// <value>
         /// The name of the user.
         /// </value>
-        [Required]
         public string UserName
         {
             get
@@ -125,7 +123,6 @@ namespace EmployeeManagementSystem.Model
         /// <value>
         /// The mobile.
         /// </value>
-        [Required]
         public string Mobile 
         {
             get

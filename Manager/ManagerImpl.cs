@@ -95,6 +95,13 @@ namespace EmployeeManagementSystem.Manager
             return result;
         }
 
+        /// <summary>
+        /// Forgets the password.
+        /// </summary>
+        /// <param name="employee">The employee.</param>
+        /// <returns>
+        /// It returns true if Password changed successfully
+        /// </returns>
         public bool ForgetPassword(Employee employee)
         {
             var result = this.repository.ForgetPassword(employee);

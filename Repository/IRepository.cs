@@ -49,6 +49,11 @@ namespace EmployeeManagementSystem.Repository
         /// <returns>It returns true if Login successful else false</returns>
         bool EmployeeLogin(Employee employee);
 
+        /// <summary>
+        /// Forgets the password.
+        /// </summary>
+        /// <param name="employee">The employee.</param>
+        /// <returns>It returns true if Password successfully changed</returns>
         bool ForgetPassword(Employee employee);
     }
 }

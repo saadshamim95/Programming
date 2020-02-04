@@ -172,6 +172,13 @@ namespace EmployeeManagementSystem.Repository
             }
         }
 
+        /// <summary>
+        /// Logins the specified employee.
+        /// </summary>
+        /// <param name="employee">The employee.</param>
+        /// <returns>
+        /// It returns true if Login successful else false
+        /// </returns>
         public bool EmployeeLogin(Employee employee)
         {
             using (SqlConnection connection = new SqlConnection(this.connectionString))
@@ -201,6 +208,11 @@ namespace EmployeeManagementSystem.Repository
             }
         }
 
+        /// <summary>
+        /// Forgets the password.
+        /// </summary>
+        /// <param name="employee">The employee.</param>
+        /// <returns>It returns true if password successfully changed else false</returns>
         public bool ForgetPassword(Employee employee)
         {
             using (SqlConnection connection = new SqlConnection(this.connectionString))
@@ -212,11 +224,6 @@ namespace EmployeeManagementSystem.Repository
                 command.Parameters.AddWithValue("@Pass", employee.Pass);
 
                 connection.Open();
-                /*DataTable dataTable = new DataTable();
-                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(command);
-                sqlDataAdapter.Fill(dataTable);
-                int result = dataTable.Rows.Count;
-                */
                 int result = command.ExecuteNonQuery();
                 connection.Close();
                 if (result == 1)

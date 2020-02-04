@@ -118,7 +118,9 @@ a:hover {
 }
 
 #errorSignUp,
-#errorLogin {
+#errorLogin,
+#error-email,
+#error-password {
     font-size: 18px;
     color: #ff3333;
 }

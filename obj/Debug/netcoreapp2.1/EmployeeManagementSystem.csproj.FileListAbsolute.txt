@@ -28,3 +28,5 @@ C:\Users\Saad Shamim\Source\Repos\Programming\Employee Management System\obj\Deb
 C:\Users\Saad Shamim\Source\Repos\Programming\Employee Management System\obj\Debug\netcoreapp2.1\EmployeeManagementSystem.pdb
 C:\Users\ye10398\source\repos\saadshamim95\Programming\EmployeeManagementSystem\bin\Debug\netcoreapp2.1\EmployeeManagementSystem.Views.dll
 C:\Users\ye10398\source\repos\saadshamim95\Programming\EmployeeManagementSystem\obj\Debug\netcoreapp2.1\EmployeeManagementSystem.csproj.CopyComplete
+C:\Users\Saad Shamim\Source\Repos\Programming\Employee Management System\bin\Debug\netcoreapp2.1\EmployeeManagementSystem.Views.dll
+C:\Users\Saad Shamim\Source\Repos\Programming\Employee Management System\obj\Debug\netcoreapp2.1\EmployeeManagementSystem.csproj.CopyComplete

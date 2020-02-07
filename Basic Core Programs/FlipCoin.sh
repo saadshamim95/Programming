@@ -7,7 +7,7 @@ do
 	read num
 done
 head=0
-tails=0
+tail=0
 RANDOM=$$
 for((i=0;i<$num;i++))
 do
@@ -15,8 +15,12 @@ do
 	then
 		head=$((head+1))
 	else
-		tails=$((tails+1))
+		tail=$((tail+1))
 	fi
 done
 echo "Number of Heads: $head"
-echo "Number of Tails: $tails"
+echo "Number of Tails: $tail"
+headPercent=$(echo | awk -v head=$head -v total=$num '{print(head*100/total)}')
+tailPercent=$(echo | awk -v tail=$tail -v total=$num '{print(tail*100/total)}')
+echo "Head Percentage: $headPercent%"
+echo "Tail Percentage: $tailPercent%"

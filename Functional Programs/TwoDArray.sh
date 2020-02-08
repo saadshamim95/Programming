@@ -12,11 +12,11 @@ do
 	done
 done
 
-for((k=0;k<$rows;k++))
+for((i=0;i<$rows;i++))
 do
-	for((l=0;l<$col;l++))
+	for((j=0;j<$col;j++))
 	do
-		printf "${array[$k,$l]} "
+		printf "${array[$i,$j]} "
 	done
 	echo ""
 done

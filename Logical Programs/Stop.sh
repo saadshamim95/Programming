@@ -21,4 +21,9 @@ then
 	S=$((60+S))
 	M=$((M-1))
 fi
+if((M<0))
+then
+	M=$((60+M))
+	H=$((H-1))
+fi
 printf  "Difference of time = %02d:%02d:%02d" "$H" "$M" "$S"

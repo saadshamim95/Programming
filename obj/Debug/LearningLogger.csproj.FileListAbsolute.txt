@@ -1,0 +1,9 @@
+C:\Users\ye10398\source\repos\saadshamim95\Programming\LearningLogger\bin\Debug\LearningLogger.exe.config
+C:\Users\ye10398\source\repos\saadshamim95\Programming\LearningLogger\bin\Debug\LearningLogger.exe
+C:\Users\ye10398\source\repos\saadshamim95\Programming\LearningLogger\bin\Debug\LearningLogger.pdb
+C:\Users\ye10398\source\repos\saadshamim95\Programming\LearningLogger\bin\Debug\log4net.dll
+C:\Users\ye10398\source\repos\saadshamim95\Programming\LearningLogger\bin\Debug\log4net.xml
+C:\Users\ye10398\source\repos\saadshamim95\Programming\LearningLogger\obj\Debug\LearningLogger.csprojAssemblyReference.cache
+C:\Users\ye10398\source\repos\saadshamim95\Programming\LearningLogger\obj\Debug\LearningLogger.csproj.CopyComplete
+C:\Users\ye10398\source\repos\saadshamim95\Programming\LearningLogger\obj\Debug\LearningLogger.exe
+C:\Users\ye10398\source\repos\saadshamim95\Programming\LearningLogger\obj\Debug\LearningLogger.pdb

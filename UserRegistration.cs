@@ -18,5 +18,17 @@ namespace XUnitTesting
 
             return false;
         }
+
+        public bool LastName(string lastName)
+        {
+            var pattern = "^[a-zA-Z]+$";
+            Regex regex = new Regex(pattern);
+            if (regex.IsMatch(lastName))
+            {
+                return true;
+            }
+
+            return false;
+        }
     }
 }

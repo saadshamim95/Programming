@@ -30,5 +30,17 @@ namespace XUnitTesting
 
             return false;
         }
+
+        public bool Email(string email)
+        {
+            var pattern = "^([a-z0-9_.]+)@(gmail|outlook|yahoo).(com|co.in|gov|edu)$";
+            Regex regex = new Regex(pattern);
+            if (regex.IsMatch(email))
+            {
+                return true;
+            }
+
+            return false;
+        }
     }
 }

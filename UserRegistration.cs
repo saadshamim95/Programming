@@ -42,5 +42,18 @@ namespace XUnitTesting
 
             return false;
         }
+
+        public bool Password(string password)
+        {
+            //var pattern = "^([a-zA-Z0-9._@]+){8,}$";
+            var passPattern = "(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&*!])(?=.{8,20})";
+            Regex regex = new Regex(passPattern);
+            if (regex.IsMatch(password))
+            {
+                return true;
+            }
+
+            return false;
+        }
     }
 }

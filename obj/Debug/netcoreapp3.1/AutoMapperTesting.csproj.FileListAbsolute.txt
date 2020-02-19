@@ -1,0 +1,13 @@
+C:\Users\ye10398\source\repos\saadshamim95\Programming\AutoMapperTesting\bin\Debug\netcoreapp3.1\AutoMapperTesting.exe
+C:\Users\ye10398\source\repos\saadshamim95\Programming\AutoMapperTesting\obj\Debug\netcoreapp3.1\AutoMapperTesting.csprojAssemblyReference.cache
+C:\Users\ye10398\source\repos\saadshamim95\Programming\AutoMapperTesting\obj\Debug\netcoreapp3.1\AutoMapperTesting.AssemblyInfoInputs.cache
+C:\Users\ye10398\source\repos\saadshamim95\Programming\AutoMapperTesting\obj\Debug\netcoreapp3.1\AutoMapperTesting.AssemblyInfo.cs
+C:\Users\ye10398\source\repos\saadshamim95\Programming\AutoMapperTesting\bin\Debug\netcoreapp3.1\AutoMapperTesting.deps.json
+C:\Users\ye10398\source\repos\saadshamim95\Programming\AutoMapperTesting\bin\Debug\netcoreapp3.1\AutoMapperTesting.runtimeconfig.json
+C:\Users\ye10398\source\repos\saadshamim95\Programming\AutoMapperTesting\bin\Debug\netcoreapp3.1\AutoMapperTesting.runtimeconfig.dev.json
+C:\Users\ye10398\source\repos\saadshamim95\Programming\AutoMapperTesting\bin\Debug\netcoreapp3.1\AutoMapperTesting.dll
+C:\Users\ye10398\source\repos\saadshamim95\Programming\AutoMapperTesting\bin\Debug\netcoreapp3.1\AutoMapperTesting.pdb
+C:\Users\ye10398\source\repos\saadshamim95\Programming\AutoMapperTesting\bin\Debug\netcoreapp3.1\AutoMapper.dll
+C:\Users\ye10398\source\repos\saadshamim95\Programming\AutoMapperTesting\obj\Debug\netcoreapp3.1\AutoMapperTesting.csproj.CopyComplete
+C:\Users\ye10398\source\repos\saadshamim95\Programming\AutoMapperTesting\obj\Debug\netcoreapp3.1\AutoMapperTesting.dll
+C:\Users\ye10398\source\repos\saadshamim95\Programming\AutoMapperTesting\obj\Debug\netcoreapp3.1\AutoMapperTesting.pdb

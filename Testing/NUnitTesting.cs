@@ -15,8 +15,16 @@ namespace Testing
         public void GivenSadMessage_WhenAnalyse_ReturnSad()
         {
             MoodAnalyzer moodAnalyzer = new MoodAnalyzer();
-            string actual = moodAnalyzer.AnalyseMood();
+            string actual = moodAnalyzer.AnalyseMood("I am in Sad Mood");
             Assert.AreEqual("SAD", actual);
+        }
+
+        [Test]
+        public void GivenAnyMessage_WhenAnalyse_ReturnHappy()
+        {
+            MoodAnalyzer moodAnalyzer = new MoodAnalyzer();
+            string actual = moodAnalyzer.AnalyseMood("I am in Any Mood");
+            Assert.AreEqual("HAPPY", actual);
         }
     }
 }

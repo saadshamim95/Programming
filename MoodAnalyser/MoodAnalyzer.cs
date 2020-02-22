@@ -6,9 +6,13 @@ namespace MoodAnalyser
 {
     public class MoodAnalyzer
     {
-        public string AnalyseMood()
+        public string AnalyseMood(string mood)
         {
-            return "SAD";
+            if (mood == "I am in Sad Mood")
+            { 
+                return "SAD"; 
+            }
+            return "HAPPY";
         }
     }
 }

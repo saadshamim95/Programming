@@ -22,8 +22,8 @@ namespace Testing
         [Test]
         public void GivenAnyMessage_WhenAnalyse_ReturnHappy()
         {
-            MoodAnalyzer moodAnalyzer = new MoodAnalyzer();
-            string actual = moodAnalyzer.AnalyseMood("I am in Any Mood");
+            MoodAnalyzer moodAnalyzer = new MoodAnalyzer("I am in Happy Mood");
+            string actual = moodAnalyzer.AnalyseMood();
             Assert.AreEqual("HAPPY", actual);
         }
     }

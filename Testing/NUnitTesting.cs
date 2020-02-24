@@ -26,5 +26,13 @@ namespace Testing
             string actual = moodAnalyzer.AnalyseMood();
             Assert.AreEqual("HAPPY", actual);
         }
+
+        [Test]
+        public void GivenNullMessage_WhenAnalyse_ReturnHappy()
+        {
+            MoodAnalyzer moodAnalyzer = new MoodAnalyzer(null);
+            string actual = moodAnalyzer.AnalyseMood();
+            Assert.AreEqual("HAPPY", actual);
+        }
     }
 }

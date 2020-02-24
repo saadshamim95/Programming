@@ -19,12 +19,24 @@ namespace MoodAnalyser
 
         public string AnalyseMood()
         {
-            if (message == "I am in Sad Mood")
-            { 
-                return "SAD"; 
-            }
+            try
+            {
+                if (message == "I am in Sad Mood")
+                {
+                    return "SAD";
+                }
 
-            return "HAPPY";
+                if (message == null)
+                {
+                    return "HAPPY";
+                }
+
+                return "HAPPY";
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
         }
     }
 }

@@ -30,8 +30,6 @@ namespace MoodAnalyser
 
         public string AnalyseMood()
         {
-            object moodAnalyserFactory = MoodAnalyserFactory.CreateObject("MoodAnalyzer");
-            moodAnalyserFactory.Equals(new MoodAnalyzer());
             try
             {
                 if (message == "I am in Sad Mood")

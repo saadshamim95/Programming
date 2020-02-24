@@ -20,7 +20,8 @@ namespace MoodAnalyser
         public enum typeOfException
         {
             EMPTY,
-            NULL
+            NULL,
+            NO_SUCH_CLASS_ERROR,
         }
 
         public typeOfException type;

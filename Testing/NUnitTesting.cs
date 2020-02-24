@@ -49,5 +49,12 @@ namespace Testing
             MoodAnalyzer moodAnalyzer = new MoodAnalyzer(); 
             Assert.IsTrue(moodAnalyzer.Equals(moodAnalyzer));
         }
+
+        [Test]
+        public void GivenClassNameImproper_WhenAnalyse_ReturnMoodAnalysisException()
+        {
+            string exceptionMessage = MoodAnalyserFactory.CreateObject("Test").ToString();
+            Assert.AreEqual("No Such Class Error", exceptionMessage);
+        }
     }
 }

@@ -17,8 +17,21 @@ namespace MoodAnalyser
             this.message = message;
         }
 
+        public override bool Equals(object obj)
+        {
+            object moodAnalyserFactory = MoodAnalyserFactory.CreateObject("MoodAnalyzer");
+            if (moodAnalyserFactory.GetType() == obj.GetType())
+            {
+                return true;
+            }
+                
+            return false;
+        }
+
         public string AnalyseMood()
         {
+            object moodAnalyserFactory = MoodAnalyserFactory.CreateObject("MoodAnalyzer");
+            moodAnalyserFactory.Equals(new MoodAnalyzer());
             try
             {
                 if (message == "I am in Sad Mood")

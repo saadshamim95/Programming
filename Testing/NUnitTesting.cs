@@ -42,5 +42,12 @@ namespace Testing
             string actual = moodAnalyzer.AnalyseMood();
             Assert.AreEqual("EMPTY", actual);
         }
+
+        [Test]
+        public void GivenMoodAnalyserClassName_WhenAnalyse_ReturnMoodAnalyserObject()
+        {
+            MoodAnalyzer moodAnalyzer = new MoodAnalyzer(); 
+            Assert.IsTrue(moodAnalyzer.Equals(moodAnalyzer));
+        }
     }
 }

@@ -4,9 +4,19 @@ using System.Text;
 
 namespace MoodAnalyser
 {
-    [Serializable]
+    //[Serializable]
     public class MoodAnalysisException : Exception
     {
+        public MoodAnalysisException()
+        { 
+        }
+
+        public MoodAnalysisException(string message, typeOfException type)
+        {
+            this.message = message;
+            this.type = type;
+        }
+
         public enum typeOfException
         {
             EMPTY,
@@ -28,11 +38,7 @@ namespace MoodAnalyser
         //    this.message = message;   
         //}
 
-        public MoodAnalysisException(string message, typeOfException type)
-        {
-            this.message = message;
-            this.type = type;
-        }
+        
 
         public override string Message
         {

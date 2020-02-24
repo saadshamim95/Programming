@@ -28,11 +28,19 @@ namespace Testing
         }
 
         [Test]
-        public void GivenNullMessage_WhenAnalyse_ReturnHappy()
+        public void GivenNullMessage_WhenAnalyse_ReturnNull()
         {
             MoodAnalyzer moodAnalyzer = new MoodAnalyzer(null);
             string actual = moodAnalyzer.AnalyseMood();
-            Assert.AreEqual("HAPPY", actual);
+            Assert.AreEqual("NULL", actual);
+        }
+
+        [Test]
+        public void GivenEmptyMessage_WhenAnalyse_ReturnEmpty()
+        {
+            MoodAnalyzer moodAnalyzer = new MoodAnalyzer(string.Empty);
+            string actual = moodAnalyzer.AnalyseMood();
+            Assert.AreEqual("EMPTY", actual);
         }
     }
 }

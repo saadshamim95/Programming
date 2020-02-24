@@ -25,18 +25,23 @@ namespace MoodAnalyser
                 {
                     return "SAD";
                 }
+                
+                if (message == string.Empty)
+                {
+                    throw new MoodAnalysisException("EMPTY", MoodAnalysisException.typeOfException.EMPTY);
+                }
 
                 if (message == null)
                 {
-                    return "HAPPY";
+                    throw new MoodAnalysisException("NULL", MoodAnalysisException.typeOfException.NULL);
                 }
-
-                return "HAPPY";
             }
-            catch (Exception ex)
+            catch (MoodAnalysisException ex)
             {
                 return ex.Message;
             }
+
+            return "HAPPY";
         }
     }
 }

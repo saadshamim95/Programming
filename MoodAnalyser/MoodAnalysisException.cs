@@ -4,7 +4,6 @@ using System.Text;
 
 namespace MoodAnalyser
 {
-    //[Serializable]
     public class MoodAnalysisException : Exception
     {
         public MoodAnalysisException()
@@ -37,9 +36,7 @@ namespace MoodAnalyser
         //public MoodAnalysisException(string message, Exception ex) : base(message, ex) 
         //{
         //    this.message = message;   
-        //}
-
-        
+        //}      
 
         public override string Message
         {

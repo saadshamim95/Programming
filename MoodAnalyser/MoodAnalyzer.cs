@@ -9,7 +9,7 @@ namespace MoodAnalyser
         private string message;
 
         public MoodAnalyzer()
-        { 
+        {
         }
 
         public MoodAnalyzer(string message)
@@ -19,12 +19,13 @@ namespace MoodAnalyser
 
         public override bool Equals(object obj)
         {
-            object moodAnalyserFactory = MoodAnalyserFactory.CreateObject("MoodAnalyzer");
+            //object moodAnalyserFactory = MoodAnalyserFactory.CreateObject("MoodAnalyzer");
+            object moodAnalyserFactory = MoodAnalyserFactory.CreateObject("MoodAnalyzer", "Hello");
             if (moodAnalyserFactory.GetType() == obj.GetType())
             {
                 return true;
             }
-                
+
             return false;
         }
 

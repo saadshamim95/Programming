@@ -24,5 +24,14 @@ namespace MoodAnalyser
                 return Ex.Message;
             }            
         }
+
+        public static object CreateObject(string classname, string message)
+        {
+            Type type = Type.GetType("MoodAnalyser." + classname);
+            Object[] argument = { message };
+            object obj = Activator.CreateInstance(type, argument);
+            return obj;
+
+        }
     }
 }

@@ -27,11 +27,23 @@ namespace MoodAnalyser
 
         public static object CreateObject(string classname, string message)
         {
-            Type type = Type.GetType("MoodAnalyser." + classname);
-            Object[] argument = { message };
-            object obj = Activator.CreateInstance(type, argument);
-            return obj;
+            try
+            {
+                Type type = Type.GetType("MoodAnalyser." + classname);
+                if (type != null)
+                {
+                    Object[] argument = { message };
+                    object obj = Activator.CreateInstance(type, argument);
+                    return obj;
+                }
 
+                throw new MoodAnalysisException("No Such Class Error", MoodAnalysisException.typeOfException.NO_SUCH_CLASS_ERROR);
+            }
+            catch (MoodAnalysisException Ex)
+            {
+                return Ex.Message;
+            }            
         }
+
     }
 }

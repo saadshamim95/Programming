@@ -43,12 +43,12 @@ namespace Testing
             Assert.AreEqual("EMPTY", actual);
         }
 
-        /*[Test]
+        [Test]
         public void GivenMoodAnalyserClassName_WhenAnalyse_ReturnMoodAnalyserObject()
         {
-            MoodAnalyzer moodAnalyzer = new MoodAnalyzer(); 
+            MoodAnalyzer moodAnalyzer = new MoodAnalyzer();
             Assert.IsTrue(moodAnalyzer.Equals(moodAnalyzer));
-        }*/
+        }
 
         [Test]
         public void GivenClassNameImproper_WhenAnalyse_ReturnMoodAnalysisException()
@@ -62,6 +62,13 @@ namespace Testing
         {
             MoodAnalyzer moodAnalyzer = new MoodAnalyzer("Hello");
             Assert.IsTrue(moodAnalyzer.Equals(moodAnalyzer));
+        }
+
+        [Test]
+        public void GivenClassNameImproperThroughConstructor_WhenAnalyse_ReturnMoodAnalysisException()
+        {
+            string exceptionMessage = MoodAnalyserFactory.CreateObject("Test","Hello").ToString();
+            Assert.AreEqual("No Such Class Error", exceptionMessage);
         }
     }
 }

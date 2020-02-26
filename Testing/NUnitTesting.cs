@@ -78,5 +78,12 @@ namespace Testing
             string actual = moodAnalyzer.GetType().GetMethod("AnalyseMood").Invoke(moodAnalyzer, null).ToString();
             Assert.AreEqual("HAPPY", actual);
         }
+
+        [Test]
+        public void GivenHappyMessageWhenImproperMethod_WhenAnalyse_ReturnMoodAnalysisException()
+        {
+            string actual = MoodAnalyserReflector.MethodCheck("analyseMood");
+            Assert.AreEqual("No Such Method Error", actual);
+        }
     }
 }

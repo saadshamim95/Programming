@@ -45,5 +45,24 @@ namespace MoodAnalyser
             }            
         }
 
+        public static string MethodCheck(string methodName)
+        {            
+            MoodAnalyzer moodAnalyzer = (MoodAnalyzer)MoodAnalyserReflector.CreateObject("MoodAnalyzer", "Happy");
+            System.Reflection.MethodInfo methodInfos = moodAnalyzer.GetType().GetMethod(methodName);
+            try
+            {
+                if (methodInfos == null)
+                {
+                    throw new MoodAnalysisException("No Such Method Error", MoodAnalysisException.typeOfException.NO_SUCH_METHOD_ERROR);
+                }
+                    
+                return methodName; 
+            }
+            catch (MoodAnalysisException Ex)
+            {
+                return Ex.Message;
+            }
+        }
+
     }
 }

@@ -21,6 +21,7 @@ namespace MoodAnalyser
             EMPTY,
             NULL,
             NO_SUCH_CLASS_ERROR,
+            NO_SUCH_METHOD_ERROR
         }
 
         public typeOfException type;

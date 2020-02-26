@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MoodAnalyser
 {
-    public class MoodAnalyserFactory
+    public class MoodAnalyserReflector
     {
         public static object CreateObject(string classname)
         {
@@ -22,7 +22,7 @@ namespace MoodAnalyser
             catch (MoodAnalysisException Ex)
             {
                 return Ex.Message;
-            }            
+            }
         }
 
         public static object CreateObject(string classname, string message)

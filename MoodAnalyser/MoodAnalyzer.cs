@@ -20,7 +20,7 @@ namespace MoodAnalyser
         public override bool Equals(object obj)
         {
             //object moodAnalyserFactory = MoodAnalyserFactory.CreateObject("MoodAnalyzer");
-            object moodAnalyserFactory = MoodAnalyserFactory.CreateObject("MoodAnalyzer", "Hello");
+            object moodAnalyserFactory = MoodAnalyserReflector.CreateObject("MoodAnalyzer", "Hello");
             if (moodAnalyserFactory.GetType() == obj.GetType())
             {
                 return true;

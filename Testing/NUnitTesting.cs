@@ -53,7 +53,7 @@ namespace Testing
         [Test]
         public void GivenClassNameImproper_WhenAnalyse_ReturnMoodAnalysisException()
         {
-            string exceptionMessage = MoodAnalyserFactory.CreateObject("Test").ToString();
+            string exceptionMessage = MoodAnalyserReflector.CreateObject("Test").ToString();
             Assert.AreEqual("No Such Class Error", exceptionMessage);
         }
 
@@ -67,7 +67,7 @@ namespace Testing
         [Test]
         public void GivenClassNameImproperThroughConstructor_WhenAnalyse_ReturnMoodAnalysisException()
         {
-            string exceptionMessage = MoodAnalyserFactory.CreateObject("Test","Hello").ToString();
+            string exceptionMessage = MoodAnalyserReflector.CreateObject("Test","Hello").ToString();
             Assert.AreEqual("No Such Class Error", exceptionMessage);
         }
     }

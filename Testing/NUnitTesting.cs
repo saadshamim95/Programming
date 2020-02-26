@@ -70,5 +70,13 @@ namespace Testing
             string exceptionMessage = MoodAnalyserReflector.CreateObject("Test","Hello").ToString();
             Assert.AreEqual("No Such Class Error", exceptionMessage);
         }
+
+        [Test]
+        public void GivenHappyMessageUsingReflection_WhenAnalyse_ReturnHappyMood()
+        {
+            MoodAnalyzer moodAnalyzer = (MoodAnalyzer)MoodAnalyserReflector.CreateObject("MoodAnalyzer", "Happy");
+            string actual = moodAnalyzer.GetType().GetMethod("AnalyseMood").Invoke(moodAnalyzer, null).ToString();
+            Assert.AreEqual("HAPPY", actual);
+        }
     }
 }

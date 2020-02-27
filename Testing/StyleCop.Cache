@@ -1,10 +1,14 @@
 <stylecopresultscache>
   <version>12</version>
+  <project key="731748084">
+    <configuration>
+    </configuration>
+  </project>
   <sourcecode name="NUnitTesting.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
       <styleCop>2020-01-09 17:35:01.625</styleCop>
       <settingsFile>2020-01-09 17:35:01.585</settingsFile>
-      <sourceFile>2020-02-26 17:25:23.517</sourceFile>
+      <sourceFile>2020-02-27 13:29:27.498</sourceFile>
       <parser>2020-01-09 17:35:01.625</parser>
       <StyleCop.CSharp.DocumentationRules>2020-01-09 17:35:01.625</StyleCop.CSharp.DocumentationRules>
       <StyleCop.CSharp.DocumentationRules.FilesHashCode>-176465969</StyleCop.CSharp.DocumentationRules.FilesHashCode>
@@ -23,8 +27,4 @@
     </timestamps>
     <violations />
   </sourcecode>
-  <project key="731748084">
-    <configuration>
-    </configuration>
-  </project>
 </stylecopresultscache>

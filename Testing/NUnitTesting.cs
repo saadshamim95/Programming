@@ -129,12 +129,11 @@ namespace Testing
             string[] parameters = new string[1];
             parameters[0] = "analyseMood";
             string actual = moodAnalyserReflector.GetType().GetMethod("MethodCheck").Invoke(moodAnalyserReflector, parameters).ToString();
-            //string actual = MoodAnalyserReflector.MethodCheck("analyseMood");
             Assert.AreEqual("No Such Method Error", actual);
         }
 
         /// <summary>
-        /// Set the happy message with reflector when analyse return happy.
+        /// Set the happy message with reflector when analyze return happy.
         /// </summary>
         [Test]
         public void SetHappyMessageWithReflector_WhenAnalyse_ReturnHappy()
@@ -148,7 +147,7 @@ namespace Testing
         }
 
         /// <summary>
-        /// Set the field with imporper message when analyse return mood analysis exception.
+        /// Set the improper field with message when analyze return mood analysis exception.
         /// </summary>
         [Test]
         public void SetValueOnImporperField_WhenAnalyse_ReturnMoodAnalysisException()
@@ -159,6 +158,20 @@ namespace Testing
             parameters[1] = "Happy";
             string actual = moodAnalyserReflector.GetType().GetMethod("SetField").Invoke(moodAnalyserReflector, parameters).ToString();
             Assert.AreEqual("No Such Field Error", actual);
+        }
+
+        /// <summary>
+        /// Set the null message with reflector when analyze return mood analysis exception.
+        /// </summary>
+        [Test]
+        public void SetNullMessageWithReflector_WhenAnalyse_ReturnMoodAnalysisException()
+        {
+            MoodAnalyserReflector moodAnalyserReflector = (MoodAnalyserReflector)MoodAnalyserReflector.CreateObject("MoodAnalyserReflector");
+            string[] parameters = new string[2];
+            parameters[0] = "check";
+            parameters[1] = null;
+            string actual = moodAnalyserReflector.GetType().GetMethod("SetField").Invoke(moodAnalyserReflector, parameters).ToString();
+            Assert.AreEqual("Null", actual);
         }
     }
 }

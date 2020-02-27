@@ -15,6 +15,9 @@ namespace MoodAnalyser
     /// </summary>
     public class MoodAnalyserReflector
     {
+        /// <summary>
+        /// The check
+        /// </summary>
         public static string check; 
 
         /// <summary>
@@ -99,26 +102,30 @@ namespace MoodAnalyser
         /// </summary>
         /// <param name="fieldName">Name of the field.</param>
         /// <param name="message">The message.</param>
-        /// <returns></returns>
+        /// <returns>It returns message if given proper fieldName</returns>
         /// <exception cref="MoodAnalyser.MoodAnalysisException">No Such Field Error</exception>
         public string SetField(string fieldName, string message)
         {
-            try {
+            try 
+            {
                 if (fieldName == "check")
                 {
                     check = message;
+                    if (message == null)
+                    {
+                        throw new MoodAnalysisException("Null", MoodAnalysisException.TypeOfException.NULL);
+                    }
+
                     FieldInfo fieldInfo = typeof(MoodAnalyserReflector).GetField("check");
                     return fieldInfo.GetValue(null).ToString();
                 }
 
                 throw new MoodAnalysisException("No Such Field Error", MoodAnalysisException.TypeOfException.NO_SUCH_FIELD_ERROR);
             }
-            catch(MoodAnalysisException exception)
+            catch (MoodAnalysisException exception)
             {
                 return exception.Message;
             }
-            
         }
-
     }
 }

@@ -1,16 +1,32 @@
-using MoodAnalyser;
-using NUnit.Framework;
+//-----------------------------------------------------------------------
+// <copyright file="NUnitTesting.cs" company="BridgeLabz">
+//     Copyright © 2020 
+// </copyright>
+// <creator name="Saad Shamim"/>
+//-----------------------------------------------------------------------
 
 namespace Testing
 {
+    using MoodAnalyser;
+    using NUnit.Framework;
+
+    /// <summary>
+    /// Class for Testing
+    /// </summary>
     [TestFixture]
-    public class Tests
+    public class NUnitTesting
     {
+        /// <summary>
+        /// The Setup
+        /// </summary>
         [SetUp]
         public void Setup()
         {
         }
 
+        /// <summary>
+        /// Given the sad message when analyze return sad.
+        /// </summary>
         [Test]
         public void GivenSadMessage_WhenAnalyse_ReturnSad()
         {
@@ -19,6 +35,9 @@ namespace Testing
             Assert.AreEqual("SAD", actual);
         }
 
+        /// <summary>
+        /// Given any message when analyze return happy.
+        /// </summary>
         [Test]
         public void GivenAnyMessage_WhenAnalyse_ReturnHappy()
         {
@@ -27,6 +46,9 @@ namespace Testing
             Assert.AreEqual("HAPPY", actual);
         }
 
+        /// <summary>
+        /// Given the null message when analyze return null.
+        /// </summary>
         [Test]
         public void GivenNullMessage_WhenAnalyse_ReturnNull()
         {
@@ -35,6 +57,9 @@ namespace Testing
             Assert.AreEqual("NULL", actual);
         }
 
+        /// <summary>
+        /// Given the empty message when analyze return empty.
+        /// </summary>
         [Test]
         public void GivenEmptyMessage_WhenAnalyse_ReturnEmpty()
         {
@@ -43,6 +68,9 @@ namespace Testing
             Assert.AreEqual("EMPTY", actual);
         }
 
+        /// <summary>
+        /// Given the mood analyzer class name when analyze return mood analyzer object.
+        /// </summary>
         [Test]
         public void GivenMoodAnalyserClassName_WhenAnalyse_ReturnMoodAnalyserObject()
         {
@@ -50,6 +78,9 @@ namespace Testing
             Assert.IsTrue(moodAnalyzer.Equals(moodAnalyzer));
         }
 
+        /// <summary>
+        /// Given the class name improper when analyze return mood analysis exception.
+        /// </summary>
         [Test]
         public void GivenClassNameImproper_WhenAnalyse_ReturnMoodAnalysisException()
         {
@@ -57,6 +88,9 @@ namespace Testing
             Assert.AreEqual("No Such Class Error", exceptionMessage);
         }
 
+        /// <summary>
+        /// Given the mood analyzer proper through constructor when analyze return mood analyzer object.
+        /// </summary>
         [Test]
         public void GivenMoodAnalyserProperThroughConstructor_WhenAnalyse_ReturnMoodAnalyserObject()
         {
@@ -64,13 +98,19 @@ namespace Testing
             Assert.IsTrue(moodAnalyzer.Equals(moodAnalyzer));
         }
 
+        /// <summary>
+        /// Given the class name improper through constructor when analyze return mood analysis exception.
+        /// </summary>
         [Test]
         public void GivenClassNameImproperThroughConstructor_WhenAnalyse_ReturnMoodAnalysisException()
         {
-            string exceptionMessage = MoodAnalyserReflector.CreateObject("Test","Hello").ToString();
+            string exceptionMessage = MoodAnalyserReflector.CreateObject("Test", "Hello").ToString();
             Assert.AreEqual("No Such Class Error", exceptionMessage);
         }
 
+        /// <summary>
+        /// Given the happy message using reflection when analyze return happy mood.
+        /// </summary>
         [Test]
         public void GivenHappyMessageUsingReflection_WhenAnalyse_ReturnHappyMood()
         {
@@ -79,11 +119,24 @@ namespace Testing
             Assert.AreEqual("HAPPY", actual);
         }
 
+        /// <summary>
+        /// Given the happy message when improper method when analyze return mood analysis exception.
+        /// </summary>
         [Test]
         public void GivenHappyMessageWhenImproperMethod_WhenAnalyse_ReturnMoodAnalysisException()
         {
             string actual = MoodAnalyserReflector.MethodCheck("analyseMood");
             Assert.AreEqual("No Such Method Error", actual);
+        }
+
+        [Test]
+        public void SetHappyMessageWithReflector_WhenAnalyse_ReturnHappy()
+        {
+            MoodAnalyserReflector moodAnalyserReflector = (MoodAnalyserReflector)MoodAnalyserReflector.CreateObject("MoodAnalyserReflector");
+            string[] parameters = new string[1];
+            parameters[0] = "Happy";
+            string actual = moodAnalyserReflector.GetType().GetMethod("SetField").Invoke(moodAnalyserReflector, parameters).ToString();
+            Assert.AreEqual("Happy", actual);
         }
     }
 }

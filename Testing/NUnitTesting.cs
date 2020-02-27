@@ -125,18 +125,40 @@ namespace Testing
         [Test]
         public void GivenHappyMessageWhenImproperMethod_WhenAnalyse_ReturnMoodAnalysisException()
         {
-            string actual = MoodAnalyserReflector.MethodCheck("analyseMood");
+            MoodAnalyserReflector moodAnalyserReflector = (MoodAnalyserReflector)MoodAnalyserReflector.CreateObject("MoodAnalyserReflector");
+            string[] parameters = new string[1];
+            parameters[0] = "analyseMood";
+            string actual = moodAnalyserReflector.GetType().GetMethod("MethodCheck").Invoke(moodAnalyserReflector, parameters).ToString();
+            //string actual = MoodAnalyserReflector.MethodCheck("analyseMood");
             Assert.AreEqual("No Such Method Error", actual);
         }
 
+        /// <summary>
+        /// Set the happy message with reflector when analyse return happy.
+        /// </summary>
         [Test]
         public void SetHappyMessageWithReflector_WhenAnalyse_ReturnHappy()
         {
             MoodAnalyserReflector moodAnalyserReflector = (MoodAnalyserReflector)MoodAnalyserReflector.CreateObject("MoodAnalyserReflector");
-            string[] parameters = new string[1];
-            parameters[0] = "Happy";
+            string[] parameters = new string[2];
+            parameters[0] = "check";
+            parameters[1] = "Happy";
             string actual = moodAnalyserReflector.GetType().GetMethod("SetField").Invoke(moodAnalyserReflector, parameters).ToString();
             Assert.AreEqual("Happy", actual);
+        }
+
+        /// <summary>
+        /// Set the field with imporper message when analyse return mood analysis exception.
+        /// </summary>
+        [Test]
+        public void SetValueOnImporperField_WhenAnalyse_ReturnMoodAnalysisException()
+        {
+            MoodAnalyserReflector moodAnalyserReflector = (MoodAnalyserReflector)MoodAnalyserReflector.CreateObject("MoodAnalyserReflector");
+            string[] parameters = new string[2];
+            parameters[0] = "anything";
+            parameters[1] = "Happy";
+            string actual = moodAnalyserReflector.GetType().GetMethod("SetField").Invoke(moodAnalyserReflector, parameters).ToString();
+            Assert.AreEqual("No Such Field Error", actual);
         }
     }
 }

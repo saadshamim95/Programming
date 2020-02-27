@@ -66,7 +66,12 @@ namespace MoodAnalyser
             /// <summary>
             /// The no such method error
             /// </summary>
-            NO_SUCH_METHOD_ERROR
+            NO_SUCH_METHOD_ERROR,
+
+            /// <summary>
+            /// The no such field error
+            /// </summary>
+            NO_SUCH_FIELD_ERROR
         }
 
         /// <summary>

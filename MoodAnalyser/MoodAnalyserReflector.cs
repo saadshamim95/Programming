@@ -15,7 +15,7 @@ namespace MoodAnalyser
     /// </summary>
     public class MoodAnalyserReflector
     {
-        public static string check;
+        public static string check; 
 
         /// <summary>
         /// Creates the object.
@@ -66,7 +66,7 @@ namespace MoodAnalyser
             catch (MoodAnalysisException exception)
             {
                 return exception.Message;
-            }            
+            }
         }
 
         /// <summary>
@@ -76,7 +76,7 @@ namespace MoodAnalyser
         /// <returns>It returns method name if method exist</returns>
         /// <exception cref="MoodAnalysisException">No Such Method Error</exception>
         public static string MethodCheck(string methodName)
-        {            
+        {
             MoodAnalyzer moodAnalyzer = (MoodAnalyzer)MoodAnalyserReflector.CreateObject("MoodAnalyzer", "Happy");
             MethodInfo methodInfos = moodAnalyzer.GetType().GetMethod(methodName);
             try
@@ -85,8 +85,8 @@ namespace MoodAnalyser
                 {
                     throw new MoodAnalysisException("No Such Method Error", MoodAnalysisException.TypeOfException.NO_SUCH_METHOD_ERROR);
                 }
-                    
-                return methodName; 
+
+                return methodName;
             }
             catch (MoodAnalysisException exception)
             {
@@ -94,11 +94,31 @@ namespace MoodAnalyser
             }
         }
 
-        public static string SetField(string message)
+        /// <summary>
+        /// Sets the field.
+        /// </summary>
+        /// <param name="fieldName">Name of the field.</param>
+        /// <param name="message">The message.</param>
+        /// <returns></returns>
+        /// <exception cref="MoodAnalyser.MoodAnalysisException">No Such Field Error</exception>
+        public string SetField(string fieldName, string message)
         {
-            check = message;
-            FieldInfo fieldInfo = typeof(MoodAnalyserReflector).GetField("check");
-            return fieldInfo.GetValue(null).ToString();
+            try {
+                if (fieldName == "check")
+                {
+                    check = message;
+                    FieldInfo fieldInfo = typeof(MoodAnalyserReflector).GetField("check");
+                    return fieldInfo.GetValue(null).ToString();
+                }
+
+                throw new MoodAnalysisException("No Such Field Error", MoodAnalysisException.TypeOfException.NO_SUCH_FIELD_ERROR);
+            }
+            catch(MoodAnalysisException exception)
+            {
+                return exception.Message;
+            }
+            
         }
+
     }
 }

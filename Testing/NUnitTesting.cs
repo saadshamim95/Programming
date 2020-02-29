@@ -75,7 +75,8 @@ namespace Testing
         public void GivenMoodAnalyserClassName_WhenAnalyse_ReturnMoodAnalyserObject()
         {
             MoodAnalyzer moodAnalyzer = new MoodAnalyzer();
-            Assert.IsTrue(moodAnalyzer.Equals(moodAnalyzer));
+            bool actual = moodAnalyzer.Equals(moodAnalyzer);
+            Assert.AreEqual(true, actual);
         }
 
         /// <summary>
@@ -95,7 +96,8 @@ namespace Testing
         public void GivenMoodAnalyserProperThroughConstructor_WhenAnalyse_ReturnMoodAnalyserObject()
         {
             MoodAnalyzer moodAnalyzer = new MoodAnalyzer("Hello");
-            Assert.IsTrue(moodAnalyzer.Equals(moodAnalyzer));
+            bool actual = moodAnalyzer.Equals(moodAnalyzer);
+            Assert.AreEqual(true,actual);
         }
 
         /// <summary>
